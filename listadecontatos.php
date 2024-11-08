@@ -7,6 +7,8 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
     exit;
 }
 
+// Conta o número de contatos
+$totalContatos = count($_SESSION['contatos']);
 ?>
 
 <!DOCTYPE html>
@@ -14,53 +16,35 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/listadecontatos">
     <title>Lista de Contatos</title>
-    <style>
-        /* Seus estilos CSS */
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
 </head>
 <body>
-    <?php require 'navbarpkl.php'; ?>
-
-    <h1>Lista de Contatos</h1>
-
-    <table>
+    <h1>Lista de Contatos (Total: <?php echo $totalContatos; ?>)</h1>
+    <table border="1">
         <tr>
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
             <th>Endereço</th>
+            <th>Ações</th>
         </tr>
-        <?php foreach ($_SESSION['contatos'] as $contato): ?>
+        <?php
+        // Exibe cada contato com um link para os detalhes
+        for ($index = 0; $index < $totalContatos; $index++): 
+            $contato = $_SESSION['contatos'][$index];
+        ?>
         <tr>
-            <td><?php echo htmlspecialchars($contato['nome']); ?></td>
-            <td><?php echo htmlspecialchars($contato['email']); ?></td>
-            <td><?php echo htmlspecialchars($contato['telefone']); ?></td>
-            <td><?php echo htmlspecialchars($contato['endereco']); ?></td>
+            <td><?php echo $contato['nome']; ?></td>
+            <td><?php echo $contato['email']; ?></td>
+            <td><?php echo $contato['telefone']; ?></td>
+            <td><?php echo $contato['endereco']; ?></td>
+            <td>
+                <!-- Link para ver detalhes do contato -->
+                <a href="informacoescontato.php?index=<?php echo $index; ?>">Ver detalhes</a>
+            </td>
         </tr>
-        <?php endforeach; ?>
+        <?php endfor; ?>
     </table>
 
     <p><a href="addctt.php">Adicionar novo contato</a></p>
