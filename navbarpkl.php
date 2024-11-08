@@ -5,7 +5,7 @@
             <ul>
                 <li><a href="#" class="link">Início</a></li>
                 <li><a href="#" class="link">Adicionar Contato</a></li>
-                <li><a href="#" class="link">Lista de Contatos</a></li>
+                <li><a href="listadecontatos.php" class="link">Lista de Contatos</a></li>
                 <li><a href="cadastro.html" class="link">Cadastro</a></li>
                 <li><a href="#" class="link">Ajuda</a></li>
             </ul>
