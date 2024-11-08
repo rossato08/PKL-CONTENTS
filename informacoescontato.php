@@ -14,12 +14,13 @@ $contato = $_SESSION['contatos'][$index];
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<link rel="stylesheet" href="./css/informacoescontato">
+
 <head>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações do Contato</title>
+    
 </head>
 <body>
     <h1>Informações do Contato</h1>
