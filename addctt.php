@@ -28,10 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Contato adicionado com sucesso!";
 }
 
-echo "<pre>";
-// Mostra os dados da sessão (para depuração)
-print_r($_SESSION['contatos']);
-echo "</pre>";
+
 ?>
 
 <!DOCTYPE html>
