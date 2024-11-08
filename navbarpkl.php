@@ -1,13 +1,15 @@
 <header class="cabecalho">
-        <h1 class="titulo animar">PKL Contacts</h1>
-     
+        <h1 class="titulo logo animar">PKL Contacts</h1>
         <nav class="navegacao">
             <ul>
-                <li><a href="#" class="link">Início</a></li>
-                <li><a href="#" class="link">Adicionar Contato</a></li>
-                <li><a href="listadecontatos.php" class="link">Lista de Contatos</a></li>
-                <li><a href="cadastro.html" class="link">Cadastro</a></li>
-                <li><a href="#" class="link">Ajuda</a></li>
+                <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>
+                        Adicionar Contato</a></li>
+                <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i
+                            class="fas fa-list"></i> Lista de Contatos</a></li>
+                <li><a href="#" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
+                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i>
+                        Ajuda</a></li>
             </ul>
         </nav>
     </header>
