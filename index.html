@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,25 @@
     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <h1 class="titulo logo animar">PKL Contacts</h1>
-     
+
         <nav class="navegacao">
             <ul>
                 <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="./adicionarcontato.html" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i> Adicionar Contato</a></li>
-                <li><a href="#" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
-                <li><a href="cadastro.html" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
-                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+                <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>
+                        Adicionar Contato</a></li>
+                <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i
+                            class="fas fa-list"></i> Lista de Contatos</a></li>
+                <li><a href="#" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
+                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i>
+                        Ajuda</a></li>
             </ul>
         </nav>
     </header>
-   
+
     <main class="conteudo">
         <section class="secao introducao">
             <h2 class="subtitulo">Bem-vindo ao seu gerenciador de contatos!</h2>
@@ -31,7 +36,7 @@
                 <button class="botao">Começar</button>
             </a>
         </section>
- 
+
         <section class="secao recursos">
             <h2 class="subtitulo">Recursos</h2>
             <div class="grid-recursos">
@@ -45,12 +50,13 @@
                 </div>
             </div>
         </section>
- 
+
         <section class="secao testemunhos">
             <h2 class="subtitulo">O que dizem nossos usuários</h2>
             <div class="lista-testemunhos">
                 <blockquote class="testemunho">
-                    "Esse gerenciador de contatos facilitou minha vida! Agora posso encontrar qualquer pessoa em segundos." – Ana Silva
+                    "Esse gerenciador de contatos facilitou minha vida! Agora posso encontrar qualquer pessoa em
+                    segundos." – Ana Silva
                 </blockquote>
                 <blockquote class="testemunho">
                     "Simples e prático. Recomendo para todos!" – João Santos
@@ -58,22 +64,30 @@
             </div>
         </section>
     </main>
-   
+
     <footer class="rodape">
         <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
+        <div class="cards">
         <div class="cardrodape">
-        <img src="./img/o-email.png" alt=""> <br>
-        <img src="./img/whatsapp.png" alt=""> <br>
-        <img src="./img/instagram.png" alt="">
-    </div>
-    <div class="cardrodape">
-        <p class="texto-rodape">Explorar</p>
-        <a href="./index.html">Início</a>
-        <a href="./addctt.php">Adicionar contato</a>
-        <a href="./listadecontatos.php">Lista de Contatos</a>
-        <a href="#">Cadastro</a>
-        <a href="./ajuda.html">Ajuda</a>
+            <div class="contatos">
+                <p class="card-titulo">Contatos</p><br>
+                <img src="./img/o-email.png" alt=""> <br>
+                <img src="./img/whatsapp.png" alt=""> <br>
+                <img src="./img/instagram.png" alt="">
+            </div>
+        </div>
+        <div class="cardrodape">
+            <div class="contatos">
+                <p class="card-titulo">Explorar</p><br>
+                <a href="./index.html" class="explorar">Início</a><br>
+                <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
+                <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
+                <a href="#" class="explorar">Cadastro</a><br>
+                <a href="./ajuda.html" class="explorar">Ajuda</a>
+            </div>
+        </div>
     </div>
     </footer>
 </body>
+
 </html>
