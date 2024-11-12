@@ -168,6 +168,10 @@ body {
     text-align: center; /* Garante que o conteúdo seja centralizado */
 }
 
+
+
+
+
 .secao {
     margin: 20px auto;
     padding: 30px;
@@ -235,6 +239,76 @@ body {
     margin: 10px 0;
     font-style: italic;
 }
+/* Estilos para o formulário */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+/* Estilos para os campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="address"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Efeito de foco nos campos de entrada */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="address"]:focus {
+    border-color: #6f42c1; /* Roxo ao focar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(111, 66, 193, 0.3);
+}
+
+/* Estilos para o botão de envio */
+form input[type="submit"] {
+    width: 100%;
+    background-color: #6f42c1;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito hover e clique no botão de envio */
+form input[type="submit"]:hover {
+    background-color: #5a34a3;
+    transform: scale(1.02);
+}
+
+form input[type="submit"]:active {
+    background-color: #4e2d8a;
+    transform: scale(0.98);
+}
+
+/* Ajuste do título do formulário */
+h1 {
+    font-size: 2rem;
+    color: #6f42c1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
 
 /* Rodapé */
 .rodape {
