@@ -280,17 +280,18 @@ h1 {
 }
 
 .texto-rodape {
-    margin: 50px;
+    margin: 15px;
     color: #f7f7f7;
     text-align: center;
 }
 .cardrodape{
     display: flex;
     background-color: #333;
-    padding: 20px;
+    padding: 15px;
     width: 260px;
-    height: 230px;
+    height: 250px;
      border-color: #333;
+     font-size:larger;
 }
 .cardrodape img{
     width: 50px;

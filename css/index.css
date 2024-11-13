@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #e9f5ff;
@@ -12,6 +11,7 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
 }
+
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -171,21 +171,21 @@ body {
 /* Rodapé */
 .rodape {
     background-color: #333;
-    padding: 10px 0;
+    padding: 1px;
     position: relative;
     width: 100%;
 }
 .texto-rodape {
-    margin: 50px;
+    margin: 15px;
     color: #f7f7f7;
     text-align: center;
 }
 .cardrodape{
     display: flex;
     background-color: #333;
-    padding: 20px;
+    padding: 15px;
     width: 260px;
-    height: 280px;
+    height: 250px;
      border-color: #333;
      font-size:larger;
 }
@@ -209,10 +209,10 @@ body {
     text-decoration:none;
     color: #f0f8ff;
 }
-.explorar:hover {
+a:hover {
     transform: scale(2.0); 
 }
-.explorar::before {
+a::before {
     content: '';
     position: absolute;
     width: 0;
@@ -222,11 +222,11 @@ body {
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
 }
-.explorar:hover::before {
+a:hover::before {
     width: 100%;
     left: 0;
 }
-.explorar:focus, .explorar:active {
+a:focus, a:active {
     color: #ffcc00;
     outline: none; 
 }
