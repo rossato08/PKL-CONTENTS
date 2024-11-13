@@ -213,10 +213,9 @@ body {
     text-decoration:none;
     color: #f0f8ff;
 }
-  .explorar:hover {
+.explorar:hover {
     transform: scale(2.0); 
   }
-
 .explorar::before {
     content: '';
     position: absolute;
