@@ -44,7 +44,6 @@ body {
         opacity: 1;
     }
 }
-
 /* Efeito hover */
 .titulo.logo:hover {
     transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
@@ -77,13 +76,11 @@ body {
     margin-right: 8px; /* Espaçamento entre ícone e texto */
     font-size: 1.4rem;
     transition: transform 0.3s ease;
-    color: #ffffff;
 }
 .link:hover {
     color: #ffffff; /* Cor ao passar o mouse */
     transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
 }
-
 .link:hover i {
     transform: translateX(5px); /* Animação suave para o ícone */
 }
