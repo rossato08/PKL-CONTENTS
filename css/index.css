@@ -190,8 +190,9 @@ body {
     background-color: #333;
     padding: 20px;
     width: 260px;
-    height: 230px;
+    height: 280px;
      border-color: #333;
+     font-size:larger;
 }
 .cardrodape img{
     width: 50px;
@@ -209,4 +210,5 @@ body {
 }
 .cards{
     display: flex;
+    justify-content: space-between;
 }
