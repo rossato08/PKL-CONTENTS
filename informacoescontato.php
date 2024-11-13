@@ -28,7 +28,6 @@ $contato = $_SESSION['contatos'][$index];
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #e9f5ff;
@@ -36,7 +35,6 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
 }
-
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -45,11 +43,9 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-
 .cabecalho:hover {
     background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
 }
-
 .titulo.logo {
     font-size: 3rem; /* Tamanho maior */
     font-weight: bold; /* Deixa a fonte mais forte */
@@ -60,7 +56,6 @@ body {
     letter-spacing: 2px; /* Espaçamento entre as letras */
     animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
 }
-
 /* Animação do nome */
 /* Estilos gerais */
 body {
@@ -71,7 +66,6 @@ body {
     color: #333;
     text-align: center;
 }
-
 h1 {
     color: #6f42c1;
     font-size: 2rem;
@@ -88,7 +82,6 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
-
 th, td {
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
@@ -103,17 +96,14 @@ th {
     font-weight: bold;
     text-transform: uppercase;
 }
-
 /* Linhas alternadas */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
 /* Estilos para a linha ao passar o mouse */
 tr:hover {
     background-color: #f1f1f1;
 }
-
 /* Link para ver detalhes do contato */
 a {
     color: #6f42c1;
@@ -121,12 +111,10 @@ a {
     font-weight: bold;
     transition: color 0.3s;
 }
-
 a:hover {
     color: #5a34a3;
     text-decoration: underline;
 }
-
 /* Estilos para o botão "Adicionar novo contato" */
 p a {
     display: inline-block;
@@ -140,19 +128,15 @@ p a {
     font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
 }
-
 p a:hover {
     background-color: #5a34a3;
     transform: scale(1.05);
 }
-
-
 /* Efeito hover */
 .titulo.logo:hover {
     transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
-
 /* Navegação */
 .navegacao ul {
     list-style-type: none;
@@ -161,12 +145,10 @@ p a:hover {
     justify-content: center; /* Centraliza os itens na barra de navegação */
     align-items: center;
 }
-
 .navegacao li {
     margin: 0 20px; /* Espaçamento entre os itens */
     position: relative; /* Para criar um efeito de underline animado */
 }
-
 .link {
     color: #fff;
     text-decoration: none;
@@ -178,22 +160,18 @@ p a:hover {
     transition: all 0.3s ease;
     position: relative;
 }
-
 .link i {
     margin-right: 8px; /* Espaçamento entre ícone e texto */
     font-size: 1.4rem;
     transition: transform 0.3s ease;
 }
-
 .link:hover {
     color: #ffffff; /* Cor ao passar o mouse */
     transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
 }
-
 .link:hover i {
     transform: translateX(5px); /* Animação suave para o ícone */
 }
-
 /* Underline animado */
 .link::before {
     content: '';
@@ -205,31 +183,37 @@ p a:hover {
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
 }
-
 .link:hover::before {
     width: 100%;
     left: 0;
 }
-
 /* Efeitos para links em foco ou clicados */
 .link:focus, .link:active {
     color: #ffcc00;
     outline: none; /* Remove o contorno padrão ao clicar */
 }
-
 /* Conteúdo */
 .conteudo {
     padding: 40px;
     text-align: center; /* Garante que o conteúdo seja centralizado */
 }
-
-
-
-
-
 </style>
 </head>
 <body>
+<header class="cabecalho">
+        <nav class="navegacao">
+            <ul>
+                <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>Adicionar Contato</a></li>
+                <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
+                <li><a href="#" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
+                <li><a href="#" class="link" aria-label="Login"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>                
+
+            </ul>
+        </nav>
+    </header> 
+    
     <h1>Informações do Contato</h1>
     <p><strong>Nome:</strong> <?php echo $contato['nome']; ?></p>
     <p><strong>Email:</strong> <?php echo $contato['email']; ?></p>
