@@ -201,21 +201,38 @@ body {
 .card-titulo{
    color: #ffffff;
    text-decoration:underline;
-}
-.explorar{
-    text-align: start;
-    text-decoration:none;
-    color: #f0f8ff;
+   text-decoration-color:#ffcc00 ;
 }
 .cards{
     display: flex;
     justify-content: space-between;
 }
-.explorar:hover {
-    color: #ffffff; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+.explorar{
+    font-size: large;
+    text-align: start;
+    text-decoration:none;
+    color: #f0f8ff;
 }
+  .explorar:hover {
+    transform: scale(2.0); 
+  }
+
+.explorar::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.explorar:hover::before {
+    width: 100%;
+    left: 0;
+}
+
 .explorar:focus, .explorar:active {
     color: #ffcc00;
-    outline: none; /* Remove o contorno padrão ao clicar */
+    outline: none; 
 }
