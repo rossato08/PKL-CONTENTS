@@ -1,54 +1,47 @@
+/* informacoescontato.css */
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f6f9;
-    height: 100vh;
+    background-color: #e9f5ff;
     color: #333;
-}
-
-/* Estilos para o container principal */
-.container {
-    background-color: #fff;
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin: 20px;
 }
 
-/* Título */
 h1 {
-    color: #4CAF50;
-    font-size: 1.8em;
+    font-size: 2rem;
+    color: #6f42c1;
     margin-bottom: 20px;
 }
 
-/* Estilos dos dados do contato */
-p {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #555;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Link de navegação */
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
 a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #4CAF50;
     text-decoration: none;
+    color: #4CAF50;
     font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid #4CAF50;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: color 0.3s;
 }
 
 a:hover {
-    background-color: #4CAF50;
-    color: white;
+    color: #45a049;
 }

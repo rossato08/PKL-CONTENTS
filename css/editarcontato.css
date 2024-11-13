@@ -1,15 +1,8 @@
-/* addctt.css */
-
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* editarcontato.css */
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #e9f5ff;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     color: #333;
     text-align: center;
     margin: 20px;
@@ -49,3 +42,5 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+

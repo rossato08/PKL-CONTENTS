@@ -1,2 +1,78 @@
+/* listacontatos.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #6f42c1;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #6f42c1;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
 
         
