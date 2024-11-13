@@ -26,13 +26,11 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
             margin: 0;
             padding: 20px;
         }
-
         h1 {
             color: #6f42c1;
             font-size: 2rem;
             margin-bottom: 20px;
         }
-
         /* Estilos para a mensagem "Sem Contatos" */
         .no-contacts {
             display: flex;
@@ -46,18 +44,15 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #555;
         }
-
         .no-contacts h2 {
             font-size: 1.5rem;
             color: #6f42c1;
             margin-bottom: 15px;
         }
-
         .no-contacts p {
             font-size: 1rem;
             margin-bottom: 20px;
         }
-
         /* Estilos da tabela */
         table {
             width: 80%;
@@ -68,28 +63,23 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
             border-radius: 8px;
             overflow: hidden;
         }
-
         th, td {
             padding: 12px 15px;
             border-bottom: 1px solid #ddd;
             text-align: left;
             font-size: 1rem;
         }
-
         th {
             background-color: #6f42c1;
             color: white;
             text-transform: uppercase;
         }
-
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-
         tr:hover {
             background-color: #f1f1f1;
         }
-
         /* Link para ver detalhes do contato */
         a {
             color: #6f42c1;
@@ -97,12 +87,10 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
             font-weight: bold;
             transition: color 0.3s;
         }
-
         a:hover {
             color: #5a34a3;
             text-decoration: underline;
         }
-
         /* Botão "Adicionar novo contato" */
         .add-contact-btn {
             display: inline-block;
@@ -117,7 +105,6 @@ if (!isset($_SESSION['contatos']) || empty($_SESSION['contatos'])) {
             text-decoration: none;
             margin-top: 20px;
         }
-
         .add-contact-btn:hover {
             background-color: #5a34a3;
             transform: scale(1.05);
