@@ -211,3 +211,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.explorar:hover {
+    color: #ffffff; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+.explorar:focus, .explorar:active {
+    color: #ffcc00;
+    outline: none; /* Remove o contorno padrão ao clicar */
+}
