@@ -81,7 +81,6 @@ body {
     color: #ffffff; /* Cor ao passar o mouse */
     transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
 }
-
 .link:hover i {
     transform: translateX(5px); /* Animação suave para o ícone */
 }
