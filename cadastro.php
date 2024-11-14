@@ -157,7 +157,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
 
-        <button class="botaocadastro" type="submit">Cadastrar</button>
+        <button class="botaocadastro" type="submit" hea>Cadastrar</button>
+
     </form>
     
     <footer class="footerslk">
