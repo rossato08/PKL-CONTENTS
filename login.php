@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     padding: 0;
 }
 body {
+    
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #e9f5ff;
     color: #333;
