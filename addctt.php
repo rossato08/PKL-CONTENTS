@@ -43,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 <header class="cabecalho">
-    <h1 class="titulo">PKL Contacts</h1>
     <nav class="navegacao">
         <ul class="lista">
         <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
