@@ -320,8 +320,8 @@ text-align: center;
 <?php if (isset($erro)): ?>
     <p style="color: red;"><?php echo $erro; ?></p>
 <?php endif; ?>
-<!-- Rodape -->
-<footer class="rodape">
+ <!-- Rodape -->
+ <footer class="rodape">
         <div class="cards">
         <div class="cardrodape">
             <div class="contatos">

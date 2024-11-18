@@ -270,8 +270,8 @@ a:focus, a:active {
     <p>Nenhum contato encontrado.</p>
 <?php endif; ?>
 
-<!-- Rodape -->
-<footer class="rodape">
+ <!-- Rodape -->
+ <footer class="rodape">
         <div class="cards">
         <div class="cardrodape">
             <div class="contatos">

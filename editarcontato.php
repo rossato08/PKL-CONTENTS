@@ -49,5 +49,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Endereço: <input type="text" name="endereco" value="<?php echo $contato['endereco']; ?>" required><br>
         <input type="submit" value="Atualizar Contato">
     </form>
+     <!-- Rodape -->
+     <footer class="rodape">
+        <div class="cards">
+        <div class="cardrodape">
+            <div class="contatos">
+                <p class="card-titulo">Nos siga</p>
+                <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="link"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="link"><i class="fab fa-linkedin"></i> Linkedin</a>
+            </div>
+        </div>
+        <div class="cardrodape">
+            <div class="contatos">
+                <p class="card-titulo">Explorar</p>
+                <a href="./index.html" class="explorar">Início</a><br>
+                <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
+                <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
+                <a href="#" class="explorar">Cadastro</a><br>
+                <a href="" class="explorar">Login</a><br>
+                <a href="./ajuda.html" class="explorar">Ajuda</a>
+            </div>
+        </div>
+        <div class="cardrodape">
+            <div class="contatos">
+                <p class="card-titulo">Fale conosco </p>
+                <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
+                <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </div>
+        </div>
+    </div>
+    <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
+    </footer>
 </body>
 </html>
