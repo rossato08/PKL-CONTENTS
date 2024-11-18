@@ -1,34 +1,19 @@
 <?php
 session_start();
 
-// Verificar se o usuário está logado
-if (!isset($_SESSION['usuario_email'])) {
-    header("Location: login.php");
-    exit;
-}
-// Obter o e-mail do usuário logado e definir o arquivo de contatos do usuário
-$email_usuario = $_SESSION['usuario_email'];
-$arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) . '_contatos.txt';
-// Criar o diretório de contatos, se não existir
-if (!is_dir('contatos')) {
-    mkdir('contatos', 0777, true);
-}
-// Processar o formulário de adição de contato
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = trim($_POST['nome']);
-    $telefone = trim($_POST['telefone']);
-    // Validar se o nome e o telefone foram preenchidos
-    if ($nome && $telefone) {
-        // Salvar o contato no arquivo do usuário
-        $contato = $nome . '|' . $telefone . PHP_EOL;
-        file_put_contents($arquivo_contatos, $contato, FILE_APPEND);
-        
-        // Redirecionar para a lista de contatos após adicionar o contato
-        header("Location: listadecontatos.php");
-        exit;
-    } else {
-        $erro = "Por favor, preencha todos os campos.";
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $usuarios = file('usuarios.txt', FILE_IGNORE_NEW_LINES);
+    foreach ($usuarios as $usuario) {
+        list($nome, $sobrenome, $cpf, $email_armazenado, $senha_armazenada) = explode('|', $usuario);
+        if ($email_armazenado === $email && $senha_armazenada === $senha) {
+            $_SESSION['usuario_email'] = $email;
+            header("Location: addctt.php");
+            exit;
+        }
     }
+    $erro = "E-mail ou senha inválidos!";
 }
 ?>
 <!DOCTYPE html>
@@ -36,27 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Contato - PKL Contacts</title>
-        <!-- Link para o Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Login - PKL Contacts</title>
+     <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="testes.css">
-</head>
-<body>
-<header class="cabecalho">
-    <nav class="navegacao">
-        <ul class="lista">
-        <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
-        <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>Adicionar Contato</a></li>
-        <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
-        <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
-        <li><a href="./login.php" class="link" aria-label="Perfil"><i class="fas fa-user"></i> Perfil</a></li>
-        <li><a href="./login.php" class="link" aria-label="Login"><i class="fas fa-user-slash"></i> Sair</a></li>    
-        <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>      
-        </ul>
-    </nav>
     <!--css-->
     <style>
-             /* Reset básico */
+        /* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -279,7 +250,7 @@ a::before {
     bottom: 0;
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
-} 
+}
 a:hover::before {
     width: 100%;
     left: 0;
@@ -294,7 +265,7 @@ a:focus, a:active {
 text-align: center;
  }
 .botao{
- width: 200px;
+ width: 150px;
  margin-top: 50px;
  }
  .form-group{
@@ -303,22 +274,40 @@ text-align: center;
     padding-bottom: 50px;
  }
     </style>
-</header>
-<br><br><h1>Adicionar Contato</h1><br><br>
-<form action="addctt.php" method="POST">
+</head>
+<body>
+   <!--cabeçalho-->
+   <header class="cabecalho">
+        <nav class="navegacao">
+            <ul>
+                <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>Adicionar Contato</a></li>
+                <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
+                <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
+                <li><a href="./login.php" class="link" aria-label="Logout"><i class="fas fa-user-slash"></i> Sair</a></li>    
+                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>                
+            </ul>
+        </nav>
+    </header>
+<!--formulario-->
+<div class="formulario">
+<h1>Login</h1>
+<form action="login.php" method="POST">
     <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
     </div>
     <div class="form-group">
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required placeholder="Ex: (11) 91234-5678"><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
     </div>
-    <button class="botao" type="submit">Adicionar Contato</button>
+    <button class="botao" type="submit">Entrar</button>
 </form>
+</div>
 <?php if (isset($erro)): ?>
     <p style="color: red;"><?php echo $erro; ?></p>
 <?php endif; ?>
+
  <!-- Rodape -->
  <footer class="rodape">
         <div class="cards">

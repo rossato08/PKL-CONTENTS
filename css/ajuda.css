@@ -200,17 +200,66 @@ body {
     margin: 10px 0;
     font-style: italic;
 }
+/* Rodapé */
 .rodape {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     position: relative;
     width: 100%;
-    bottom: 0;
 }
 .texto-rodape {
-    margin: 0;
+    margin: 15px;
+    color: #f7f7f7;
+    text-align: center;
 }
- 
+.cardrodape{
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+    width: 260px;
+    height: 250px;
+     border-color: #333;
+     font-size:larger;
+}
+.cardrodape img{
+    width: 50px;
+    height: 50px;
+}
+
+.card-titulo{
+   color: #ffffff;
+   text-decoration:underline;
+   text-decoration-color:#ffcc00 ;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.explorar{
+    font-size: large;
+    text-align: start;
+    text-decoration:none;
+    color: #f0f8ff;
+}
+.explorar:hover {
+    transform: scale(2.0); 
+}
+.explorar::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.explorar:hover::before {
+    width: 100%;
+    left: 0;
+}
+.explorar:focus, .explorar:active {
+    color: #ffcc00;
+    outline: none; 
+}
  
