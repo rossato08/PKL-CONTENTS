@@ -134,7 +134,6 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
 }
-
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -297,6 +296,7 @@ body {
     padding: 1px;
     position: relative;
     width: 100%;
+    top: 300px;
 }
 .texto-rodape {
     margin: 10px;
