@@ -25,6 +25,22 @@ if (file_exists($arquivo_contatos)) {
         ];
     }
 }
+
+// Excluir contato
+if (isset($_GET['excluir'])) {
+    $indice = (int)$_GET['excluir'];
+    if (isset($contatos[$indice])) {
+        unset($contatos[$indice]);
+        // Atualizar o arquivo
+        $novas_linhas = [];
+        foreach ($contatos as $contato) {
+            $novas_linhas[] = implode('|', $contato);
+        }
+        file_put_contents($arquivo_contatos, implode(PHP_EOL, $novas_linhas) . PHP_EOL);
+        header("Location: listadecontatos.php");
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -89,6 +105,22 @@ if (file_exists($arquivo_contatos)) {
         tr:hover {
             background-color: #f1f1f1;
         }
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            color: white;
+        }
+        .btn-editar {
+            background-color: #007bff;
+        }
+        .btn-excluir {
+            background-color: #dc3545;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -117,15 +149,20 @@ if (file_exists($arquivo_contatos)) {
                 <th>Telefone</th>
                 <th>E-mail</th>
                 <th>Endereço</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($contatos as $contato): ?>
+            <?php foreach ($contatos as $indice => $contato): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($contato['nome']); ?></td>
                     <td><?php echo htmlspecialchars($contato['telefone']); ?></td>
                     <td><?php echo htmlspecialchars($contato['email']); ?></td>
                     <td><?php echo htmlspecialchars($contato['endereco']); ?></td>
+                    <td>
+                        <a class="btn btn-editar" href="editarcontato.php?indice=<?php echo $indice; ?>">Editar</a>
+                        <a class="btn btn-excluir" href="listadecontatos.php?excluir=<?php echo $indice; ?>" onclick="return confirm('Tem certeza que deseja excluir este contato?');">Excluir</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
