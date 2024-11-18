@@ -280,7 +280,7 @@ a::before {
     bottom: 0;
     left: 50%;
     transition: width 0.3s ease, left 0.3s ease;
-}
+} 
 a:hover::before {
     width: 100%;
     left: 0;
