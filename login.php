@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         list($nome, $sobrenome, $cpf, $email_armazenado, $senha_armazenada) = explode('|', $usuario);
         if ($email_armazenado === $email && $senha_armazenada === $senha) {
             $_SESSION['usuario_email'] = $email;
-            header("Location: addctt.php");
+            header("Location: listadecontatos.php");
             exit;
         }
     }
