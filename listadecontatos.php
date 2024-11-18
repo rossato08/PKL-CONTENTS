@@ -6,7 +6,6 @@ if (!isset($_SESSION['usuario_email'])) {
     header("Location: login.php");
     exit;
 }
-
 // Obter o e-mail do usuário logado e definir o arquivo de contatos
 $email_usuario = $_SESSION['usuario_email'];
 $arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) . '_contatos.txt';
@@ -25,7 +24,6 @@ if (file_exists($arquivo_contatos)) {
         ];
     }
 }
-
 // Excluir contato
 if (isset($_GET['excluir'])) {
     $indice = (int)$_GET['excluir'];
