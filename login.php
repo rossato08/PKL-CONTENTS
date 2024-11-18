@@ -286,7 +286,6 @@ text-align: center;
                 <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
                 <li><a href="./login.php" class="link" aria-label="Logout"><i class="fas fa-user-slash"></i> Sair</a></li>    
                 <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>                
-
             </ul>
         </nav>
     </header>
@@ -309,8 +308,8 @@ text-align: center;
     <p style="color: red;"><?php echo $erro; ?></p>
 <?php endif; ?>
 
-<!-- Rodape -->
-<footer class="rodape">
+ <!-- Rodape -->
+ <footer class="rodape">
         <div class="cards">
         <div class="cardrodape">
             <div class="contatos">

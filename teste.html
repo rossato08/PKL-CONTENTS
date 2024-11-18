@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="testes.css">
+</head>
+
+<body>
+
+    <!--                              navbar                             --> 
+
+    <header class="cabecalho">
+        <h1 class="titulo animar">PKL Contacts</h1>
+
+        <nav class="navegacao">
+            <ul class="lista">
+                <li><a href="#" class="link">Início</a></li>
+                <li><a href="#" class="link">Adicionar Contato</a></li>
+                <li><a href="#" class="link">Lista de Contatos</a></li>
+                <li><a href="cadastro.html" class="link">Cadastro</a></li>
+                <li><a href="#" class="link">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--                               anuncio                                  -->
+
+    <div class="anuncio">
+        <img class="img1" src="./img/neyney.jfif" alt="">
+    </div>
+
+    <div class="anuncio2">
+        <img class="img2" src="./img/leaozao.jpeg" alt="">
+    </div>
+
+    <!--                               formulário                                   -->
+
+    <form id="cadastro-form"  action="testecadastro.php" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+            </div>
+            <div class="form-group">
+                <label for="apelido">CPF:</label>
+                <input type="text" id="CPF" name="cpf" required maxlength="14">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmar-senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+        </div>
+
+        <!--                           botão                                  -->
+
+        <button class="botaocadastro" type="submit">Cadastrar</button>
+    </form>
+
+    <!--                              anuncio                          -->
+
+
+
+    <footer class="footerslk">
+        <div class="footer1">
+            <p class="rodape">&copy; PKL Contacts - Todos os direitos reservados</p>
+
+        </div>
+
+        <div class="footer2">
+            <ul class="redes">
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Youtube</li>
+                <li>Tik Tok</li>
+                <li></li>
+            </ul>
+        </div>
+
+        
+        
+
+    </footer>
+
+    
+    
+</body>
+
+</html>
+
+
