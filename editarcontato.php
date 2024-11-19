@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+   
         }
         header {
             background-color: #6f42c1;
@@ -64,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 400px;
+       
         }
         form h2 {
             margin-top: 0;
