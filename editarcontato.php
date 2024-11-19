@@ -112,11 +112,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .btn-cancelar:hover {
             background-color: #c82333;
         }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #666;
-        }
          /* Reset básico */
          * {
             box-sizing: border-box;
@@ -128,8 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #e9f5ff;
             color: #333;
             line-height: 1.6;
-            text-align: center;
-            /* Centraliza o texto em todo o corpo */
+            text-align: center;  /* Centraliza o texto em todo o corpo */
         }
         /* Cabeçalho */
         .cabecalho {
@@ -161,15 +155,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             list-style-type: none;
             padding: 0;
             display: flex;
-            justify-content: center;
-            /* Centraliza os itens na barra de navegação */
+            justify-content: center; /* Centraliza os itens na barra de navegação */
             align-items: center;
         }
         .navegacao li {
-            margin: 0 20px;
-            /* Espaçamento entre os itens */
-            position: relative;
-            /* Para criar um efeito de underline animado */
+            margin: 0 20px; /* Espaçamento entre os itens */
+            position: relative; /* Para criar um efeito de underline animado */
         }
         .link {
             color: #fff;
@@ -183,20 +174,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             position: relative;
         }
         .link i {
-            margin-right: 8px;
-            /* Espaçamento entre ícone e texto */
+            margin-right: 8px; /* Espaçamento entre ícone e texto */
             font-size: 1.4rem;
             transition: transform 0.3s ease;
         }
         .link:hover {
-            color: #ffffff;
-            /* Cor ao passar o mouse */
-            transform: scale(1.05);
-            /* Leve aumento no tamanho ao passar o mouse */
+            color: #ffffff;/* Cor ao passar o mouse */
+            transform: scale(1.05);/* Leve aumento no tamanho ao passar o mouse */
         }
         .link:hover i {
-            transform: translateX(5px);
-            /* Animação suave para o ícone */
+            transform: translateX(5px); /* Animação suave para o ícone */
         }
         /* Underline animado */
         .link::before {
@@ -214,11 +201,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             left: 0;
         }
         /* Efeitos para links em foco ou clicados */
-        .link:focus,
-        .link:active {
+        .link:focus, .link:active {
             color: #ffcc00;
-            outline: none;
-            /* Remove o contorno padrão ao clicar */
+            outline: none;/* Remove o contorno padrão ao clicar */
         }
         .botao {
             color: white;
@@ -227,20 +212,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #6f42c1;
-            /* Roxo */
+            background-color: #6f42c1;/* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
         .botao:hover {
-            background-color: #5a34a3;
-            /* Roxo escuro ao passar o mouse */
+            background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
         /* Testemunhos */
         .testemunho {
             background-color: #f0f8ff;
-            border-left: 5px solid #6f42c1;
-            /* Roxo */
+            border-left: 5px solid #6f42c1;/* Roxo */
             padding: 15px;
             margin: 10px 0;
             font-style: italic;
@@ -249,9 +231,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .rodape {
             background-color: #333;
             padding: 1px;
+            width: 100px;
             position: relative;
-            width: 100%;
-            top: 150px;
         }
         .texto-rodape {
             margin: 10px;
@@ -281,28 +262,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-align: start;
             text-decoration: none;
             color: #f0f8ff;
-        }
-        /*linha colorida*/
-        a:hover {
-            transform: scale(2.0);
-        }
-        a::before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background-color: #ffcc00;
-            bottom: 0;
-            left: 50%;
-            transition: width 0.3s ease, left 0.3s ease;
-        }
-        a:hover::before {
-            width: 100%;
-            left: 0;
-        }
-        a:focus, a:active {
-            color: #ffcc00;
-            outline: none;
         }
     </style>
 </head>
