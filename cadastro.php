@@ -70,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
             /* Centraliza o texto em todo o corpo */
         }
+
         /* Cabeçalho */
         .cabecalho {
             color: white;
@@ -79,10 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
+
         .cabecalho:hover {
             background-color: #5a34a3;
             /* Roxo escuro ao passar o mouse */
         }
+
         /* Animação do nome */
         @keyframes animarLogo {
             0% {
@@ -95,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 opacity: 1;
             }
         }
+
         /* Navegação */
         .navegacao ul {
             list-style-type: none;
@@ -104,12 +108,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             /* Centraliza os itens na barra de navegação */
             align-items: center;
         }
+
         .navegacao li {
             margin: 0 20px;
             /* Espaçamento entre os itens */
             position: relative;
             /* Para criar um efeito de underline animado */
         }
+
         .link {
             color: #fff;
             text-decoration: none;
@@ -121,6 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transition: all 0.3s ease;
             position: relative;
         }
+
         .link i {
             margin-right: 8px;
             /* Espaçamento entre ícone e texto */
@@ -151,10 +158,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
+
         .link:hover::before {
             width: 100%;
             left: 0;
         }
+
         /* Efeitos para links em foco ou clicados */
         .link:focus,
         .link:active {
@@ -162,6 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             outline: none;
             /* Remove o contorno padrão ao clicar */
         }
+
         .botao {
             color: white;
             border: none;
@@ -173,11 +183,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             /* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
+
         .botao:hover {
             background-color: #5a34a3;
             /* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
+
         /* Testemunhos */
         .testemunho {
             background-color: #f0f8ff;
@@ -187,7 +199,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 10px 0;
             font-style: italic;
         }
-
         /* Rodapé */
         .rodape {
             background-color: #333;
@@ -196,13 +207,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%;
             top: 150px;
         }
-
         .texto-rodape {
             margin: 10px;
             color: #f7f7f7;
             text-align: center;
         }
-
         .cardrodape {
             display: flex;
             background-color: #333;
@@ -212,18 +221,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-color: #333;
             font-size: larger;
         }
-
         .card-titulo {
             color: #ffffff;
             text-decoration: underline;
             text-decoration-color: #ffcc00;
         }
-
         .cards {
             display: flex;
             justify-content: space-between;
         }
-
         .explorar {
             font-size: large;
             text-align: start;
@@ -257,9 +263,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-top: 50px;
             padding-bottom: 100px;
             background-color: #ffff;
-            border-left: 5px solid #6f42c1;  /* Roxo */
+            border-left: 5px solid #6f42c1;
+            /* Roxo */
             padding: 20px;
-            margin-left: 530px ;
+            margin-left: 530px;
             font-style: italic;
             width: 750px;
             display: grid;
@@ -271,6 +278,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 140px;
             margin-right: 10px;
             margin-top: 20px;
+        }
+        /* Efeito de onda no botão */
+        .botao::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+
+        .botao:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .botao:hover {
+            background: #008c96;
+            /* Cor mais escura no hover */
+            transform: translateY(-3px);
+            /* Efeito de elevação no hover */
         }
     </style>
 </head>
@@ -381,7 +412,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button class="botao" type="submit">Cadastrar</button>
     </div>
 
-  
+
 
     </form>
     <!-- Rodape -->

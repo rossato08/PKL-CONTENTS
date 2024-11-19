@@ -232,7 +232,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #333;
             padding: 1px;
             width: 100px;
-            position: relative;
         }
         .texto-rodape {
             margin: 10px;
