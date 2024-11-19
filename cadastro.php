@@ -158,20 +158,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
-
         .link:hover::before {
             width: 100%;
             left: 0;
         }
-
-        /* Efeitos para links em foco ou clicados */
+         /* Efeitos para links em foco ou clicados */
         .link:focus,
         .link:active {
             color: #ffcc00;
-            outline: none;
-            /* Remove o contorno padrão ao clicar */
+            outline: none;/* Remove o contorno padrão ao clicar */
         }
-
         .botao {
             color: white;
             border: none;
@@ -179,14 +175,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #6f42c1;
-            /* Roxo */
+            background-color: #6f42c1;/* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
-
         .botao:hover {
-            background-color: #5a34a3;
-            /* Roxo escuro ao passar o mouse */
+            background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
 
@@ -263,8 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-top: 50px;
             padding-bottom: 100px;
             background-color: #ffff;
-            border-left: 5px solid #6f42c1;
-            /* Roxo */
+            border-left: 5px solid #6f42c1;/* Roxo */
             padding: 20px;
             margin-left: 530px;
             font-style: italic;
@@ -292,16 +284,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transform: translate(-50%, -50%) scale(0);
             transition: transform 0.6s ease;
         }
-
         .botao:hover::before {
             transform: translate(-50%, -50%) scale(1);
         }
-
         .botao:hover {
-            background: #008c96;
-            /* Cor mais escura no hover */
-            transform: translateY(-3px);
-            /* Efeito de elevação no hover */
+            background: #008c96;/* Cor mais escura no hover */
+            transform: translateY(-3px);/* Efeito de elevação no hover */
         }
     </style>
 </head>
@@ -411,9 +399,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button class="botao" type="submit">Cadastrar</button>
     </div>
-
-
-
     </form>
     <!-- Rodape -->
     <footer class="rodape">

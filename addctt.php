@@ -301,6 +301,26 @@ a:focus, a:active {
     color: #ffcc00;
     outline: none; 
 }
+/* Efeito de onda no botão */
+.botao::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+        .botao:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .botao:hover {
+            background: #008c96;/* Cor mais escura no hover */
+            transform: translateY(-3px);/* Efeito de elevação no hover */
+        }
     </style>
 </head>
 <body>
