@@ -70,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
             /* Centraliza o texto em todo o corpo */
         }
-
         /* Cabeçalho */
         .cabecalho {
             color: white;
@@ -80,31 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
-
         .cabecalho:hover {
             background-color: #5a34a3;
             /* Roxo escuro ao passar o mouse */
         }
-
-        .titulo.logo {
-            font-size: 3rem;
-            /* Tamanho maior */
-            font-weight: bold;
-            /* Deixa a fonte mais forte */
-            background: linear-gradient(45deg, #ffffff, #ffffff);
-            /* Gradiente de cor */
-            -webkit-background-clip: text;
-            /* Faz o gradiente aplicar no texto */
-            color: transparent;
-            /* Torna o fundo transparente para mostrar o gradiente */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            /* Sombra suave no texto */
-            letter-spacing: 2px;
-            /* Espaçamento entre as letras */
-            animation: animarLogo 1.5s ease-out forwards;
-            /* Animação do nome */
-        }
-
         /* Animação do nome */
         @keyframes animarLogo {
             0% {
@@ -117,15 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 opacity: 1;
             }
         }
-
-        /* Efeito hover */
-        .titulo.logo:hover {
-            transform: scale(1.1);
-            /* Aumenta o tamanho quando o mouse passa */
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            /* Aumenta a sombra */
-        }
-
         /* Navegação */
         .navegacao ul {
             list-style-type: none;
@@ -135,14 +104,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             /* Centraliza os itens na barra de navegação */
             align-items: center;
         }
-
         .navegacao li {
             margin: 0 20px;
             /* Espaçamento entre os itens */
             position: relative;
             /* Para criar um efeito de underline animado */
         }
-
         .link {
             color: #fff;
             text-decoration: none;
@@ -154,7 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transition: all 0.3s ease;
             position: relative;
         }
-
         .link i {
             margin-right: 8px;
             /* Espaçamento entre ícone e texto */
@@ -185,12 +151,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
-
         .link:hover::before {
             width: 100%;
             left: 0;
         }
-
         /* Efeitos para links em foco ou clicados */
         .link:focus,
         .link:active {
@@ -198,42 +162,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             outline: none;
             /* Remove o contorno padrão ao clicar */
         }
-
-        /* Conteúdo */
-        .conteudo {
-            padding: 40px;
-            text-align: center;
-            /* Garante que o conteúdo seja centralizado */
-        }
-
-        .secao {
-            margin: 20px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .secao:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .subtitulo {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #6f42c1;
-            /* Roxo */
-        }
-
-        .descricao {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
         .botao {
             color: white;
             border: none;
@@ -245,13 +173,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             /* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
-
         .botao:hover {
             background-color: #5a34a3;
             /* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
-
         /* Testemunhos */
         .testemunho {
             background-color: #f0f8ff;

@@ -139,7 +139,6 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
 }
-
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -151,16 +150,6 @@ body {
 .cabecalho:hover {
     background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
 }
-.titulo.logo {
-    font-size: 3rem; /* Tamanho maior */
-    font-weight: bold; /* Deixa a fonte mais forte */
-    background: linear-gradient(45deg, #ffffff, #ffffff); /* Gradiente de cor */
-    -webkit-background-clip: text; /* Faz o gradiente aplicar no texto */
-    color: transparent; /* Torna o fundo transparente para mostrar o gradiente */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
-    letter-spacing: 2px; /* Espaçamento entre as letras */
-    animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
-}
 /* Animação do nome */
 @keyframes animarLogo {
     0% {
@@ -171,11 +160,6 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
-}
-/* Efeito hover */
-.titulo.logo:hover {
-    transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
 /* Navegação */
 .navegacao ul {
@@ -232,34 +216,6 @@ body {
     color: #ffcc00;
     outline: none; /* Remove o contorno padrão ao clicar */
 }
-/* Conteúdo */
-.conteudo {
-    padding: 40px;
-    text-align: center; /* Garante que o conteúdo seja centralizado */
-}
-.secao {
-    margin: 20px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.secao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-.subtitulo {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #6f42c1; /* Roxo */
-}
-.descricao {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #555;
-}
 .botao {
     color: white;
     border: none;
@@ -273,20 +229,6 @@ body {
 .botao:hover {
     background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
     transform: scale(1.05);
-}
-/* Grid de recursos */
-.grid-recursos {
-    display: flex;
-    justify-content: center; /* Centraliza os itens na grid */
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
-}
-.recurso {
-    margin: 10px; /* Adiciona margem entre os recursos */
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Largura máxima para os recursos */
 }
 /* Testemunhos */
 .testemunho {
