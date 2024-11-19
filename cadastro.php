@@ -252,26 +252,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transform: scale(1.05);
         }
 
-        /* Grid de recursos */
-        .grid-recursos {
-            display: flex;
-            justify-content: center;
-            /* Centraliza os itens na grid */
-            flex-wrap: wrap;
-            /* Permite que os itens se movam para a próxima linha se necessário */
-        }
-
-        .recurso {
-            margin: 10px;
-            /* Adiciona margem entre os recursos */
-            padding: 20px;
-            border-radius: 5px;
-            background-color: #f7f7f7;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-            max-width: 250px;
-            /* Largura máxima para os recursos */
-        }
-
         /* Testemunhos */
         .testemunho {
             background-color: #f0f8ff;
@@ -324,12 +304,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-decoration: none;
             color: #f0f8ff;
         }
-
         /*linha colorida*/
         a:hover {
             transform: scale(2.0);
         }
-
         a::before {
             content: '';
             position: absolute;
@@ -340,7 +318,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
-
         a:hover::before {
             width: 100%;
             left: 0;
@@ -349,6 +326,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: #ffcc00;
             outline: none;
         }
+        /*formulario*/
         .form {
             margin-top: 50px;
             padding-bottom: 100px;
@@ -363,7 +341,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .form h1 {
             color: #6f42c1;
         }
-
         .botao {
             width: 140px;
             margin-right: 10px;
