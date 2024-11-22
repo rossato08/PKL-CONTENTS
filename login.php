@@ -328,6 +328,7 @@ a:focus, a:active {
     color: #333;
     font-weight: bold;
     margin-bottom: 5px;
+    margin-left: 100px;
     display: block; /* Garante que o label fique em linha acima do input */
     transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
 }
@@ -384,9 +385,6 @@ a:focus, a:active {
         margin-bottom: 10px;
     }
 }
-
-
- 
     </style>
 <script>
 // Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
