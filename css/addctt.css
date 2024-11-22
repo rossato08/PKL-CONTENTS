@@ -1,51 +1,276 @@
-/* addctt.css */
 
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* Estilo Geral */
+  body {
+    font-family: 'Arial', sans-serif;
     background-color: #e9f5ff;
     color: #333;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    margin: 20px;
 }
-
-h1 {
-    font-size: 2rem;
-    color: #6f42c1;
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background: #fff;
+header {
+    background-color: #6f42c1;
+    color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-input[type="text"], input[type="email"], input[type="tel"], input[type="submit"] {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ffcc00;
+}
+.formulario {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.formulario h1 {
+    color: #6f42c1;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
 }
-
-input[type="submit"] {
-    background-color: #4CAF50;
+.form-group textarea {
+    resize: vertical;
+}
+.botao {
+    background-color: #6f42c1;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+}
+.botao:hover {
+    background-color: #5a34a3;
+}
+/* Reset básico */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Helvetica Neue', Arial, sans-serif;
+background-color: #e9f5ff;
+color: #333;
+line-height: 1.6;
+text-align: center; /* Centraliza o texto em todo o corpo */
+}
+/* Cabeçalho */
+.cabecalho {
+color: white;
+padding: 30px;
+background-color: #6f42c1; /* Roxo */
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s ease;
+}
+.cabecalho:hover {
+background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
+}
+/* Animação do nome */
+@keyframes animarLogo {
+0% {
+transform: translateY(-50px);
+opacity: 0;
+}
+100% {
+transform: translateY(0);
+opacity: 1;
+}
+}
+/* Navegação */
+.navegacao ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+justify-content: center; /* Centraliza os itens na barra de navegação */
+align-items: center;
+}
+.navegacao li {
+margin: 0 20px; /* Espaçamento entre os itens */
+position: relative; /* Para criar um efeito de underline animado */
+}
+.link {
+color: #fff;
+text-decoration: none;
+font-size: 1.2rem;
+font-weight: 500;
+display: flex;
+align-items: center;
+padding: 8px 10px;
+transition: all 0.3s ease;
+position: relative;
+}
+.link i {
+margin-right: 8px; /* Espaçamento entre ícone e texto */
+font-size: 1.4rem;
+transition: transform 0.3s ease;
+}
+.link:hover {
+color: #ffffff; /* Cor ao passar o mouse */
+transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+.link:hover i {
+transform: translateX(5px); /* Animação suave para o ícone */
+}
+/* Underline animado */
+.link::before {
+content: '';
+position: absolute;
+width: 0;
+height: 3px;
+background-color: #ffcc00;
+bottom: 0;
+left: 50%;
+transition: width 0.3s ease, left 0.3s ease;
+}
+.link:hover::before {
+width: 100%;
+left: 0;
+}
+/* Efeitos para links em foco ou clicados */
+.link:focus, .link:active {
+color: #ffcc00;
+outline: none; /* Remove o contorno padrão ao clicar */
+}
+.botao {
+color: white;
+border: none;
+padding: 12px 24px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1rem;
+background-color: #6f42c1; /* Roxo */
+transition: background-color 0.3s, transform 0.3s;
+}
+.botao:hover {
+background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
+transform: scale(1.05);
+}
+/* Testemunhos */
+.testemunho {
+background-color: #f0f8ff;
+border-left: 5px solid #6f42c1; /* Roxo */
+padding: 15px;
+margin: 10px 0;
+font-style: italic;
+}
+/* Rodapé */
+.rodape {
+background-color: #333;
+padding: 1px;
+position: relative;
+width: 100%;
+top: 200px;
+}
+.texto-rodape {
+margin: 10px;
+color: #f7f7f7;
+text-align: center;
+}
+.cardrodape{
+display: flex;
+background-color: #333;
+padding: 15px;
+width: 260px;
+height: 250px;
+border-color: #333;
+font-size:larger;
+}
+.cardrodape img{
+width: 50px;
+height: 50px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+.card-titulo{
+color: #ffffff;
+text-decoration:underline;
+text-decoration-color:#ffcc00 ;
+}
+.cards{
+display: flex;
+justify-content: space-between;
+}
+.explorar{
+font-size: large;
+text-align: start;
+text-decoration:none;
+color: #f0f8ff;
+}
+a:hover {
+transform: scale(2.0); 
+}
+a::before {
+content: '';
+position: absolute;
+width: 0;
+height: 3px;
+background-color: #ffcc00;
+bottom: 0;
+left: 50%;
+transition: width 0.3s ease, left 0.3s ease;
+}
+a:hover::before {
+width: 100%;
+left: 0;
+}
+a:focus, a:active {
+color: #ffcc00;
+outline: none; 
+}
+/* Efeito de onda no botão */
+.botao::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+.botao:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+.botao:hover {
+    background: #008c96;/* Cor mais escura no hover */
+    transform: translateY(-3px);/* Efeito de elevação no hover */
 }
