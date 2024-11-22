@@ -313,7 +313,7 @@ a:focus, a:active {
 }
  
 .botao:hover {
-    background: #008c96; /* Cor mais escura no hover */
+    background:#ffcc00; /* Cor mais escura no hover */
     transform: translateY(-3px); /* Efeito de elevação no hover */
 }
 /* Estilo geral para o form-group */
