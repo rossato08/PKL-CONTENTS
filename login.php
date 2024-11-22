@@ -301,6 +301,9 @@ text-align: center;
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br>
     </div>
+    <div class="naotemcad">
+        <p>Não tem cadastro? <a href="./cadastro.php">Cadastre-se</a></p>
+    </div>
     <button class="botao" type="submit">Entrar</button>
 </form>
 </div>
