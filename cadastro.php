@@ -288,7 +288,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transform: translate(-50%, -50%) scale(1);
         }
         .botao:hover {
-            background:#ffcc00;/* Cor mais escura no hover */
+            background:#ffcc00;/* Cor mais escura no hover, amarelo */
             transform: translateY(-3px);/* Efeito de elevação no hover */
         }
     </style>
