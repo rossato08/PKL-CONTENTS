@@ -271,6 +271,11 @@ a:focus, a:active {
     transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
 }
+
+.formulario h1{
+    font-size: 40px;
+    color: #5a34a3;
+}
  
 /* Efeito ao passar o mouse sobre o formulário */
 .formulario:hover {
@@ -324,11 +329,11 @@ a:focus, a:active {
  
 /* Estilo do label */
 .form-group label {
-    font-size: 16px;
+    font-size: 24px;
     color: #333;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-left: 100px;
+    margin-left: 250px;
     display: block; /* Garante que o label fique em linha acima do input */
     transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
 }
@@ -367,6 +372,23 @@ a:focus, a:active {
     transform: translateY(-50%);
     font-size: 18px;
     color: #aaa;
+}
+
+/* não tem cadastro */
+.naotemcad {
+    font-size: 24px;
+
+}
+
+.naotemcad a {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.naotemcad a:hover {
+    color: #5a34a3;
+    transition: 0.4s;
 }
  
 /* Responsividade - ajustes em telas menores */
@@ -443,7 +465,7 @@ botao.addEventListener("click", function(e) {
     </header>
 <!--formulario-->
 <div class="formulario">
-<h1>Login</h1>
+<h1>Login</h1> <br>
 <form action="login.php" method="POST">
     <div class="form-group">
         <label for="email">Email:</label>
