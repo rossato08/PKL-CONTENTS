@@ -69,6 +69,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             line-height: 1.6;
             text-align: center;
             /* Centraliza o texto em todo o corpo */
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                /* sobreposição preta semitransparente */
+                url('imgs/pl4.jpeg');
+            /* imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f0f0f0;
+            /* Cor de fundo de reserva */
         }
 
         /* Cabeçalho */
@@ -158,16 +169,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
+
         .link:hover::before {
             width: 100%;
             left: 0;
         }
-         /* Efeitos para links em foco ou clicados */
+
+        /* Efeitos para links em foco ou clicados */
         .link:focus,
         .link:active {
             color: #ffcc00;
-            outline: none;/* Remove o contorno padrão ao clicar */
+            outline: none;
+            /* Remove o contorno padrão ao clicar */
         }
+
         .botao {
             color: white;
             border: none;
@@ -175,11 +190,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #6f42c1;/* Roxo */
+            background-color: #6f42c1;
+            /* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
+
         .botao:hover {
-            background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
+            background-color: #5a34a3;
+            /* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
 
@@ -192,6 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 10px 0;
             font-style: italic;
         }
+
         /* Rodapé */
         .rodape {
             background-color: #333;
@@ -200,11 +219,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%;
             top: 150px;
         }
+
         .texto-rodape {
             margin: 10px;
             color: #f7f7f7;
             text-align: center;
         }
+
         .cardrodape {
             display: flex;
             background-color: #333;
@@ -214,25 +235,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-color: #333;
             font-size: larger;
         }
+
         .card-titulo {
             color: #ffffff;
             text-decoration: underline;
             text-decoration-color: #ffcc00;
         }
+
         .cards {
             display: flex;
             justify-content: space-between;
         }
+
         .explorar {
             font-size: large;
             text-align: start;
             text-decoration: none;
             color: #f0f8ff;
         }
+
         /*linha colorida*/
         a:hover {
             transform: scale(2.0);
         }
+
         a::before {
             content: '';
             position: absolute;
@@ -243,34 +269,172 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
+
         a:hover::before {
             width: 100%;
             left: 0;
         }
-        a:focus, a:active {
+
+        a:focus,
+        a:active {
             color: #ffcc00;
             outline: none;
         }
+
         /*formulario*/
         .form {
             margin-top: 50px;
             padding-bottom: 100px;
             background-color: #ffff;
-            border-left: 5px solid #6f42c1;/* Roxo */
+            border-radius: 18px #5a34a3;
+            /* Roxo */
             padding: 20px;
             margin-left: 530px;
             font-style: italic;
             width: 750px;
             display: grid;
         }
+
         .form h1 {
             color: #6f42c1;
         }
+
+        /* Estilo dos inputs */
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="cpf"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+            box-sizing: border-box;
+            /* Garante que o padding seja contabilizado dentro da largura */
+            transition: all 0.3s ease;
+            /* Transição suave */
+            position: relative;
+        }
+
+        /* Efeito de foco nos inputs */
+        .form-group input[type="email"]:focus,
+        .form-group input[type="password"]:focus,
+        .form-group input[type="text"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="date"]:focus {
+            border-color: #5a34a3;
+            /* Cor de foco */
+            background-color: #fff;
+            /* Cor de fundo ao focar */
+            outline: none;
+            /* Remove o contorno padrão do navegador */
+            box-shadow: 0 0 8px rgba(0, 188, 212, 0.7);
+            /* Efeito de sombra */
+        }
+
+        /* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
+        .form-group input[type="email"]:before {
+            content: '\f0e0';
+            /* Ícone do email */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            /* Ajusta a posição do ícone */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group input[type="password"]:before {
+            content: '\f023';
+            /* Ícone de cadeado para senha */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group input[type="text"]:before {
+            content: '\f007';
+            /* Ícone de pessoa para nome/sobrenome */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group input[type="tel"]:before {
+            content: '\f095';
+            /* Ícone de telefone */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group input[type="date"]:before {
+            content: '\f133';
+            /* Ícone de calendário */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group input[type="cpf"]:before {
+            content: '\f0c0';
+            /* Ícone de identidade, você pode mudar para o ícone de CPF se disponível */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        /* Para o select (estado), você pode adicionar ícones também, caso deseje) */
+        .form-group select:before {
+            content: '\f0c0';
+            /* Um ícone genérico, mas você pode alterar */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        .form-group select {
+            width: 225px;
+            height: 52px;
+            border-radius: 8px;
+        }
+
         .botao {
             width: 140px;
             margin-right: 10px;
             margin-top: 20px;
         }
+
         /* Efeito de onda no botão */
         .botao::before {
             content: '';
@@ -284,14 +448,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             transform: translate(-50%, -50%) scale(0);
             transition: transform 0.6s ease;
         }
+
         .botao:hover::before {
             transform: translate(-50%, -50%) scale(1);
         }
+
         .botao:hover {
-            background:#ffcc00;/* Cor mais escura no hover, amarelo */
-            transform: translateY(-3px);/* Efeito de elevação no hover */
+            background: #ffcc00;
+            /* Cor mais escura no hover, amarelo */
+            transform: translateY(-3px);
+            /* Efeito de elevação no hover */
         }
     </style>
+    <script>
+        // Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputs = document.querySelectorAll(".form-control");
+
+            inputs.forEach(input => {
+                input.addEventListener("focus", function() {
+                    this.style.borderColor = "#00bcd4"; // Destaca a borda ao focar
+                });
+                input.addEventListener("blur", function() {
+                    this.style.borderColor = "#333"; // Restaura a borda ao desfocar
+                });
+            });
+        });
+
+        // Efeito de carregamento no botão (quando pressionado)
+        const botao = document.querySelector(".botao");
+
+        botao.addEventListener("click", function(e) {
+            e.preventDefault(); // Previne o envio imediato do formulário
+
+            const loadingText = "Carregando...";
+            this.innerHTML = loadingText;
+            this.disabled = true; // Desabilita o botão
+
+            // Simula um delay de carregamento
+            setTimeout(() => {
+                this.innerHTML = "Concluído";
+                this.disabled = false;
+                setTimeout(() => {
+                    this.innerHTML = "Enviar"; // Restaura o texto
+                }, 1000);
+            }, 2000); // Delay de 2 segundos
+        });
+    </script>
 </head>
 
 <body>

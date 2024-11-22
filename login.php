@@ -39,7 +39,19 @@ body {
     color: #333;
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* sobreposição preta semitransparente */
+    url('imgs/pl4.jpeg'); /* imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f0f0f0; /* Cor de fundo de reserva */
+    
 }
+
+
+
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -355,7 +367,7 @@ a:focus, a:active {
 /* Efeito de foco nos inputs */
 .form-group input[type="email"]:focus,
 .form-group input[type="password"]:focus {
-    border-color: #00bcd4; /* Cor de foco */
+    border-color: #5a34a3; /* Cor de foco */
     background-color: #fff; /* Cor de fundo ao focar */
     outline: none; /* Remove o contorno padrão do navegador */
     box-shadow: 0 0 8px rgba(0, 188, 212, 0.7); /* Efeito de sombra */
