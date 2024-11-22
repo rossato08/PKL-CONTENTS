@@ -1,6 +1,1 @@
-santana|11 9526623604
-caio|11965334543
-sophia|11985654354
-mr beast|7393949735
-joão|11754354455
-maria|55462
+João|11912345678|joao.ao@jo.ao|muito longe

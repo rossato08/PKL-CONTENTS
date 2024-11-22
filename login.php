@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         list($nome, $sobrenome, $cpf, $email_armazenado, $senha_armazenada) = explode('|', $usuario);
         if ($email_armazenado === $email && $senha_armazenada === $senha) {
             $_SESSION['usuario_email'] = $email;
-            header("Location: addctt.php");
+            header("Location: listadecontatos.php");
             exit;
         }
     }
@@ -259,20 +259,174 @@ a:focus, a:active {
     color: #ffcc00;
     outline: none; 
 }
+/* Base do Formulário */
 .formulario {
- padding-top: 80px;
- padding-bottom: 100px;
-text-align: center;
- }
-.botao{
- width: 150px;
- margin-top: 50px;
- }
- .form-group{
-    padding-left:870px;
+    background-color: #ffffff; /* Cor off-white */
+    padding: 80px 20px 100px 20px;
     text-align: center;
-    padding-bottom: 50px;
- }
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário na tela */
+    transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
+    margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
+}
+ 
+/* Efeito ao passar o mouse sobre o formulário */
+.formulario:hover {
+    transform: scale(1.05); /* Aumento suave do formulário ao passar o mouse */
+}
+ 
+/* Botão futurista */
+.botao {
+    width: 180px;
+    padding: 12px;
+    margin-top: 30px;
+    background: #6f42c1 ; /* roxo */
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease, transform 0.2s ease;
+}
+ 
+/* Efeito de onda no botão */
+.botao::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+ 
+.botao:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+ 
+.botao:hover {
+    background:#ffcc00; /* Cor mais escura no hover */
+    transform: translateY(-3px); /* Efeito de elevação no hover */
+}
+/* Estilo geral para o form-group */
+.form-group {
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+    position: relative; /* Necessário para posicionamento do ícone no input */
+}
+ 
+/* Estilo do label */
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Garante que o label fique em linha acima do input */
+    transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
+}
+ 
+/* Estilo dos inputs */
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width : 300%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box; /* Garante que o padding seja contabilizado dentro da largura */
+    transition: all 0.3s ease; /* Transição suave */
+}
+ 
+/* Efeito de foco nos inputs */
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #00bcd4; /* Cor de foco */
+    background-color: #fff; /* Cor de fundo ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.7); /* Efeito de sombra */
+}
+ 
+/* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
+.form-group input[type="email"]:before,
+.form-group input[type="password"]:before {
+    content: '\f0e0'; /* Ícone do email, por exemplo */
+    font-family: FontAwesome;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+}
+ 
+/* Responsividade - ajustes em telas menores */
+@media (max-width: 768px) {
+    .formulario {
+        padding: 60px 15px 80px 15px;
+    }
+ 
+    .botao {
+        width: 100%;
+ 
+    }
+ 
+    .form-control {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+
+ 
+    </style>
+<script>
+// Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
+document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll(".form-control");
+ 
+    inputs.forEach(input => {
+        input.addEventListener("focus", function() {
+            this.style.borderColor = "#00bcd4"; // Destaca a borda ao focar
+        });
+        input.addEventListener("blur", function() {
+            this.style.borderColor = "#333"; // Restaura a borda ao desfocar
+        });
+    });
+});
+ 
+// Efeito de carregamento no botão (quando pressionado)
+const botao = document.querySelector(".botao");
+ 
+botao.addEventListener("click", function(e) {
+    e.preventDefault();  // Previne o envio imediato do formulário
+ 
+    const loadingText = "Carregando...";
+    this.innerHTML = loadingText;
+    this.disabled = true;  // Desabilita o botão
+ 
+    // Simula um delay de carregamento
+    setTimeout(() => {
+        this.innerHTML = "Concluído";
+        this.disabled = false;
+        setTimeout(() => {
+            this.innerHTML = "Enviar"; // Restaura o texto
+        }, 1000);
+    }, 2000); // Delay de 2 segundos
+});
+</script>
+
+ 
+
+
     </style>
 </head>
 <body>
@@ -284,7 +438,7 @@ text-align: center;
                 <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>Adicionar Contato</a></li>
                 <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
                 <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
-                <li><a href="./login.php" class="link" aria-label="Logout"><i class="fas fa-user-slash"></i> Sair</a></li>    
+                <li><a href="./logout.php" class="link" aria-label="Logout"><i class="fas fa-user-slash"></i> Sair</a></li>    
                 <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>                
             </ul>
         </nav>

@@ -6,19 +6,40 @@ if (!isset($_SESSION['usuario_email'])) {
     header("Location: login.php");
     exit;
 }
-
-// Obter o e-mail do usuário logado e criar o nome do arquivo de contatos
+// Obter o e-mail do usuário logado e definir o arquivo de contatos
 $email_usuario = $_SESSION['usuario_email'];
 $arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) . '_contatos.txt';
 
+// Verificar se o arquivo de contatos existe
 $contatos = [];
-
-// Verificar se o arquivo de contatos do usuário existe e lê-lo
 if (file_exists($arquivo_contatos)) {
-    $contatos = file($arquivo_contatos, FILE_IGNORE_NEW_LINES);
+    $linhas = file($arquivo_contatos, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($linhas as $linha) {
+        $dados = explode('|', $linha);
+        $contatos[] = [
+            'nome' => $dados[0] ?? '',
+            'telefone' => $dados[1] ?? '',
+            'email' => $dados[2] ?? '',
+            'endereco' => $dados[3] ?? ''
+        ];
+    }
+}
+// Excluir contato
+if (isset($_GET['excluir'])) {
+    $indice = (int)$_GET['excluir'];
+    if (isset($contatos[$indice])) {
+        unset($contatos[$indice]);
+        // Atualizar o arquivo
+        $novas_linhas = [];
+        foreach ($contatos as $contato) {
+            $novas_linhas[] = implode('|', $contato);
+        }
+        file_put_contents($arquivo_contatos, implode(PHP_EOL, $novas_linhas) . PHP_EOL);
+        header("Location: listadecontatos.php");
+        exit;
+    }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,10 +48,80 @@ if (file_exists($arquivo_contatos)) {
     <title>Lista de Contatos - PKL Contacts</title>
     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="testes.css">
-     <!--css-->
-     <style>
-             /* Reset básico */
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9f5ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #6f42c1;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #6f42c1;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            color: white;
+        }
+        .btn-editar {
+            background-color: #007bff;
+        }
+        .btn-excluir {
+            background-color: #dc3545;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+       /* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -177,13 +268,35 @@ body {
     background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
     transform: scale(1.05);
 }
+/* Grid de recursos */
+.grid-recursos {
+    display: flex;
+    justify-content: center; /* Centraliza os itens na grid */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+}
+.recurso {
+    margin: 10px; /* Adiciona margem entre os recursos */
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Largura máxima para os recursos */
+}
+/* Testemunhos */
+.testemunho {
+    background-color: #f0f8ff;
+    border-left: 5px solid #6f42c1; /* Roxo */
+    padding: 15px;
+    margin: 10px 0;
+    font-style: italic;
+}
 /* Rodapé */
-.rodape{
- background-color: #333;
- padding: 1px;
- position: relative;
- width: 100%;
- top: 290px;
+.rodape {
+    background-color: #333;
+    padding: 1px;
+    position: relative;
+    width: 100%;
+    top: 300px;
 }
 .texto-rodape {
     margin: 10px;
@@ -240,38 +353,55 @@ a:focus, a:active {
     color: #ffcc00;
     outline: none; 
 }
-
-        </style>
+    </style>
 </head>
 <body>
-    <!--cabeçalho-->
-    <header class="cabecalho">
+<!--cabeçalho-->
+<header class="cabecalho">
         <nav class="navegacao">
             <ul>
                 <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
                 <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i class="fas fa-user-plus"></i>Adicionar Contato</a></li>
                 <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i class="fas fa-list"></i> Lista de Contatos</a></li>
                 <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i> Cadastro</a></li>
-                <li><a href="./login.php" class="link" aria-label="Logout"><i class="fas fa-user-slash"></i> Sair</a></li>    
+                <li><a href="./logout.php" class="link" aria-label="Login"><i class="fas fa-user-slash"></i> Sair</a></li>    
                 <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></li>                
             </ul>
         </nav>
     </header>
-<br><h1>Lista de Contatos</h1><br>
 
 <?php if (!empty($contatos)): ?>
-    <ul>
-        <?php foreach ($contatos as $contato): ?>
-            <?php list($nome, $telefone) = explode('|', $contato); ?>
-            <li><?php echo "Nome: $nome, Telefone: $telefone"; ?></li>
-        <?php endforeach; ?>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($contatos as $indice => $contato): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($contato['nome']); ?></td>
+                    <td><?php echo htmlspecialchars($contato['telefone']); ?></td>
+                    <td><?php echo htmlspecialchars($contato['email']); ?></td>
+                    <td><?php echo htmlspecialchars($contato['endereco']); ?></td>
+                    <td>
+                        <a class="btn btn-editar" href="editarcontato.php?indice=<?php echo $indice; ?>">Editar</a>
+                        <a class="btn btn-excluir" href="listadecontatos.php?excluir=<?php echo $indice; ?>" onclick="return confirm('Tem certeza que deseja excluir este contato?');">Excluir</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 <?php else: ?>
-    <p>Nenhum contato encontrado.</p>
+    <p>Nenhum contato encontrado. Adicione um novo contato!</p>
 <?php endif; ?>
 
- <!-- Rodape -->
- <footer class="rodape">
+<!-- Rodape -->
+<footer class="rodape">
         <div class="cards">
         <div class="cardrodape">
             <div class="contatos">
