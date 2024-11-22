@@ -374,12 +374,10 @@ a:focus, a:active {
     .formulario {
         padding: 60px 15px 80px 15px;
     }
- 
     .botao {
         width: 100%;
  
     }
- 
     .form-control {
         width: 90%;
         margin-bottom: 10px;
@@ -400,7 +398,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
- 
 // Efeito de carregamento no botão (quando pressionado)
 const botao = document.querySelector(".botao");
  
@@ -421,10 +418,6 @@ botao.addEventListener("click", function(e) {
     }, 2000); // Delay de 2 segundos
 });
 </script>
-
- 
-
-
     </style>
 </head>
 <body>
