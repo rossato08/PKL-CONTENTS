@@ -86,25 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             /* Roxo escuro ao passar o mouse */
         }
 
-        .titulo.logo {
-            font-size: 3rem;
-            /* Tamanho maior */
-            font-weight: bold;
-            /* Deixa a fonte mais forte */
-            background: linear-gradient(45deg, #ffffff, #ffffff);
-            /* Gradiente de cor */
-            -webkit-background-clip: text;
-            /* Faz o gradiente aplicar no texto */
-            color: transparent;
-            /* Torna o fundo transparente para mostrar o gradiente */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            /* Sombra suave no texto */
-            letter-spacing: 2px;
-            /* Espaçamento entre as letras */
-            animation: animarLogo 1.5s ease-out forwards;
-            /* Animação do nome */
-        }
-
         /* Animação do nome */
         @keyframes animarLogo {
             0% {
@@ -116,14 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 transform: translateY(0);
                 opacity: 1;
             }
-        }
-
-        /* Efeito hover */
-        .titulo.logo:hover {
-            transform: scale(1.1);
-            /* Aumenta o tamanho quando o mouse passa */
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            /* Aumenta a sombra */
         }
 
         /* Navegação */
@@ -185,55 +158,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             left: 50%;
             transition: width 0.3s ease, left 0.3s ease;
         }
-
         .link:hover::before {
             width: 100%;
             left: 0;
         }
-
-        /* Efeitos para links em foco ou clicados */
+         /* Efeitos para links em foco ou clicados */
         .link:focus,
         .link:active {
             color: #ffcc00;
-            outline: none;
-            /* Remove o contorno padrão ao clicar */
+            outline: none;/* Remove o contorno padrão ao clicar */
         }
-
-        /* Conteúdo */
-        .conteudo {
-            padding: 40px;
-            text-align: center;
-            /* Garante que o conteúdo seja centralizado */
-        }
-
-        .secao {
-            margin: 20px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .secao:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .subtitulo {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #6f42c1;
-            /* Roxo */
-        }
-
-        .descricao {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
         .botao {
             color: white;
             border: none;
@@ -241,14 +175,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #6f42c1;
-            /* Roxo */
+            background-color: #6f42c1;/* Roxo */
             transition: background-color 0.3s, transform 0.3s;
         }
-
         .botao:hover {
-            background-color: #5a34a3;
-            /* Roxo escuro ao passar o mouse */
+            background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
             transform: scale(1.05);
         }
 
@@ -261,7 +192,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 10px 0;
             font-style: italic;
         }
-
         /* Rodapé */
         .rodape {
             background-color: #333;
@@ -270,13 +200,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%;
             top: 150px;
         }
-
         .texto-rodape {
             margin: 10px;
             color: #f7f7f7;
             text-align: center;
         }
-
         .cardrodape {
             display: flex;
             background-color: #333;
@@ -286,18 +214,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-color: #333;
             font-size: larger;
         }
-
         .card-titulo {
             color: #ffffff;
             text-decoration: underline;
             text-decoration-color: #ffcc00;
         }
-
         .cards {
             display: flex;
             justify-content: space-between;
         }
-
         .explorar {
             font-size: large;
             text-align: start;
@@ -331,9 +256,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-top: 50px;
             padding-bottom: 100px;
             background-color: #ffff;
-            border-left: 5px solid #6f42c1;  /* Roxo */
+            border-left: 5px solid #6f42c1;/* Roxo */
             padding: 20px;
-            margin-left: 530px ;
+            margin-left: 530px;
             font-style: italic;
             width: 750px;
             display: grid;
@@ -345,6 +270,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 140px;
             margin-right: 10px;
             margin-top: 20px;
+        }
+        /* Efeito de onda no botão */
+        .botao::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+        }
+        .botao:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .botao:hover {
+            background:#ffcc00;/* Cor mais escura no hover */
+            transform: translateY(-3px);/* Efeito de elevação no hover */
         }
     </style>
 </head>
@@ -454,9 +399,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button class="botao" type="submit">Cadastrar</button>
     </div>
-
-  
-
     </form>
     <!-- Rodape -->
     <footer class="rodape">
