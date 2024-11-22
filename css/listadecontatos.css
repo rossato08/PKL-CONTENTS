@@ -217,6 +217,7 @@ transition: background-color 0.3s, transform 0.3s;
 background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
 transform: scale(1.05);
 }
+
 /* Grid de recursos */
 .grid-recursos {
 display: flex;
@@ -231,6 +232,7 @@ background-color: #f7f7f7;
 box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 max-width: 250px; /* Largura máxima para os recursos */
 }
+
 /* Testemunhos */
 .testemunho {
 background-color: #f0f8ff;
@@ -239,13 +241,15 @@ padding: 15px;
 margin: 10px 0;
 font-style: italic;
 }
+
 /* Rodapé */
 .rodape {
 background-color: #333;
 padding: 1px;
 position: relative;
 width: 100%;
-top: 300px;
+top: 360px;
+padding-bottom:10px;
 }
 .texto-rodape {
 margin: 10px;
@@ -261,6 +265,7 @@ height: 250px;
 border-color: #333;
 font-size:larger;
 }
+
 .cardrodape img{
 width: 50px;
 height: 50px;
