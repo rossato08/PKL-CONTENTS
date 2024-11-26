@@ -30,8 +30,8 @@ body {
     -webkit-background-clip: text; /* Faz o gradiente aplicar no texto */
     color: transparent; /* Torna o fundo transparente para mostrar o gradiente */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
-    letter-spacing: 2px; /* Espaçamento entre as letras */
-    animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
+    letter-spacing: 2px; /* Espaçamento das letras */
+    animation: animarLogo 1.5s ease-out forwards; /* Animação*/
 }
 /* Animação do nome */
 @keyframes animarLogo {
@@ -49,6 +49,7 @@ body {
     transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
 }
+
 /* Navegação */
 .navegacao ul {
     list-style-type: none;
@@ -168,6 +169,7 @@ body {
     margin: 10px 0;
     font-style: italic;
 }
+
 /* Rodapé */
 .rodape {
     background-color: #333;
