@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="testes.css">
     <script>
-        // Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
+        // Efeito de digitação nos campos de entrada
         document.addEventListener("DOMContentLoaded", function() {
             const inputs = document.querySelectorAll(".form-control");
 
@@ -69,13 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 });
             });
         });
-
-        // Efeito de carregamento no botão (quando pressionado)
+        // Efeito de carregamento no botão
         const botao = document.querySelector(".botao");
-
         botao.addEventListener("click", function(e) {
             e.preventDefault(); // Previne o envio imediato do formulário
-
             const loadingText = "Carregando...";
             this.innerHTML = loadingText;
             this.disabled = true; // Desabilita o botão

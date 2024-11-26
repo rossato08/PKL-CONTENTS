@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Adicionar Contato - PKL Contacts</title>
      <!-- Link para o Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!--CSS-->
      <link rel="stylesheet" href="./css/addctt.css">
 </head>
 <body>
@@ -61,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </nav>
     </header>
+    <!--formulario-->
 <div class="formulario">
     <h1>Adicionar Contato</h1>
     <form action="addctt.php" method="POST">

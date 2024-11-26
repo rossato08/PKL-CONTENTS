@@ -18,7 +18,6 @@ body {
     color: white;
     padding: 30px;
     background-color: #6f42c1;/* Roxo */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 .cabecalho:hover {
@@ -102,8 +101,7 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 .botao:hover {
-    background-color: #5a34a3;
-    /* Roxo escuro ao passar o mouse */
+    background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
     transform: scale(1.05);
 }
 header {
@@ -238,14 +236,14 @@ a:focus,a:active {
     color: #ffcc00;
     outline: none;
 }
-/* Efeito de onda no botão */
-.botao::before {
+ /* Efeito de onda no botão */
+ .botao::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
+    width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
