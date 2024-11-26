@@ -54,7 +54,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <!-- CSS -->
     <link rel="stylesheet" href="testes.css">
+    <link rel="stylesheet" href="cadastro.css">
     
+    <script>
+        // Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputs = document.querySelectorAll(".form-control");
+
+            inputs.forEach(input => {
+                input.addEventListener("focus", function() {
+                    this.style.borderColor = "#00bcd4"; // Destaca a borda ao focar
+                });
+                input.addEventListener("blur", function() {
+                    this.style.borderColor = "#333"; // Restaura a borda ao desfocar
+                });
+            });
+        });
+
+        // Efeito de carregamento no botão (quando pressionado)
+        const botao = document.querySelector(".botao");
+
+        botao.addEventListener("click", function(e) {
+            e.preventDefault(); // Previne o envio imediato do formulário
+
+            const loadingText = "Carregando...";
+            this.innerHTML = loadingText;
+            this.disabled = true; // Desabilita o botão
+
+            // Simula um delay de carregamento
+            setTimeout(() => {
+                this.innerHTML = "Concluído";
+                this.disabled = false;
+                setTimeout(() => {
+                    this.innerHTML = "Enviar"; // Restaura o texto
+                }, 1000);
+            }, 2000); // Delay de 2 segundos
+        });
+    </script>
 </head>
 
 <body>

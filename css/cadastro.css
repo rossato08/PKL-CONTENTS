@@ -1,12 +1,9 @@
-<!-- CSS -->
-<style>
-    /* Reset básico */
+/* Reset básico */
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
-
     body {
         font-family: 'Helvetica Neue', Arial, sans-serif;
         background-color: #e9f5ff;
@@ -373,13 +370,11 @@
         height: 52px;
         border-radius: 8px;
     }
-
     .botao {
         width: 140px;
         margin-right: 10px;
         margin-top: 20px;
     }
-
     /* Efeito de onda no botão */
     .botao::before {
         content: '';
@@ -393,11 +388,9 @@
         transform: translate(-50%, -50%) scale(0);
         transition: transform 0.6s ease;
     }
-
     .botao:hover::before {
         transform: translate(-50%, -50%) scale(1);
     }
-
     .botao:hover {
         background: #ffcc00;
         /* Cor mais escura no hover, amarelo */
