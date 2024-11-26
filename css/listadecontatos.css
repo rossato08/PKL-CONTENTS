@@ -1,54 +1,19 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #e9f5ff;
     color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
+    line-height: 1.6;
+    text-align: center; /* Centraliza o texto em todo o corpo */
+    }
 /* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     }
-    body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #e9f5ff;
-    color: #333;
-    line-height: 1.6;
-    text-align: center; /* Centraliza o texto em todo o corpo */
-    }
-/*nav*/
-header {
-    background-color: #6f42c1;
-    color: white;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-nav ul li {
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-nav ul li a:hover {
-    color: #ffcc00;
-}
+
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -65,7 +30,7 @@ nav ul li a:hover {
     font-weight: bold; /* Deixa a fonte mais forte */
     background: linear-gradient(45deg, #ffffff, #ffffff); /* Gradiente de cor */
     -webkit-background-clip: text; /* Faz o gradiente aplicar no texto */
-    color: transparent; /* Torna o fundo transparente para mostrar o gradiente */
+    color: transparent; /* Torna o fundo transparente */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
     letter-spacing: 2px; /* Espaçamento entre as letras */
     animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
@@ -86,6 +51,7 @@ nav ul li a:hover {
     transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
     }
+
     /* Navegação */
     .navegacao ul {
     list-style-type: none;
@@ -141,6 +107,36 @@ nav ul li a:hover {
     color: #ffcc00;
     outline: none; /* Remove o contorno padrão ao clicar */
     }
+    header {
+        background-color: #6f42c1;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+        color: #ffcc00;
+    }
+    
 /*informações de contatos/lista de contatos */
 table {
     width: 80%;
@@ -161,6 +157,7 @@ th {
 tr:hover {
     background-color: #f1f1f1;
 }
+/*botão*/
 .btn {
     padding: 5px 10px;
     border: none;
@@ -177,34 +174,6 @@ tr:hover {
 .btn:hover {
     opacity: 0.8;
 }
-/* Conteúdo */
-.conteudo {
-padding: 40px;
-text-align: center; /* Garante que o conteúdo seja centralizado */
-}
-.secao {
-margin: 20px auto;
-padding: 30px;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-max-width: 600px;
-transition: transform 0.3s, box-shadow 0.3s;
-}
-.secao:hover {
-transform: translateY(-5px);
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-.subtitulo {
-font-size: 1.8rem;
-margin-bottom: 10px;
-color: #6f42c1; /* Roxo */
-}
-.descricao {
-font-size: 1.2rem;
-margin-bottom: 20px;
-color: #555;
-}
 .botao {
 color: white;
 border: none;
@@ -218,30 +187,6 @@ transition: background-color 0.3s, transform 0.3s;
 .botao:hover {
 background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
 transform: scale(1.05);
-}
-
-/* Grid de recursos */
-.grid-recursos {
-display: flex;
-justify-content: center; /* Centraliza os itens na grid */
-flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
-}
-.recurso {
-margin: 10px; /* Adiciona margem entre os recursos */
-padding: 20px;
-border-radius: 5px;
-background-color: #f7f7f7;
-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-max-width: 250px; /* Largura máxima para os recursos */
-}
-
-/* Testemunhos */
-.testemunho {
-background-color: #f0f8ff;
-border-left: 5px solid #6f42c1; /* Roxo */
-padding: 15px;
-margin: 10px 0;
-font-style: italic;
 }
 
 /* Rodapé */
@@ -267,12 +212,10 @@ height: 250px;
 border-color: #333;
 font-size:larger;
 }
-
 .cardrodape img{
 width: 50px;
 height: 50px;
 }
-
 .card-titulo{
 color: #ffffff;
 text-decoration:underline;
