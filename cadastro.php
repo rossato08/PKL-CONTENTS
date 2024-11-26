@@ -53,9 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <!-- CSS -->
+    <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="testes.css">
-    <link rel="stylesheet" href="cadastro.css">
-    
     <script>
         // Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
         document.addEventListener("DOMContentLoaded", function() {
