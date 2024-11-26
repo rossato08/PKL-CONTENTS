@@ -61,8 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </nav>
     </header>
-
-
 <div class="formulario">
     <h1>Adicionar Contato</h1>
     <form action="addctt.php" method="POST">
