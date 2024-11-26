@@ -227,6 +227,5 @@ a:hover::before {
     left: 0;
 }
 a:focus, a:active {
-    color: #ffcc00;
     outline: none; 
 }

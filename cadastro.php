@@ -52,7 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Cadastro de Usuário</title>
     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- CSS -->
     <link rel="stylesheet" href="testes.css">
+<<<<<<< HEAD
     <!-- CSS -->
     <style>
         /* Reset básico */
@@ -495,6 +497,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }, 2000); // Delay de 2 segundos
         });
     </script>
+=======
+    <link rel="stylesheet" href="./css/cadastro.css">
+>>>>>>> 45c46e065972f90bbd6c7a869aa301a5383b8127
 </head>
 
 <body>
