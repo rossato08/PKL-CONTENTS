@@ -105,8 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>

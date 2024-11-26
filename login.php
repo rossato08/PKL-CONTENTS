@@ -49,9 +49,6 @@ body {
     background-color: #f0f0f0; /* Cor de fundo de reserva */
     
 }
-
-
-
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -288,8 +285,7 @@ a:focus, a:active {
     font-size: 40px;
     color: #5a34a3;
 }
- 
-/* Efeito ao passar o mouse sobre o formulário */
+ /* Efeito ao passar o mouse sobre o formulário */
 .formulario:hover {
     transform: scale(1.05); /* Aumento suave do formulário ao passar o mouse */
 }
@@ -507,8 +503,8 @@ botao.addEventListener("click", function(e) {
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>
