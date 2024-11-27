@@ -10,8 +10,14 @@ body {
     color: #333;
     line-height: 1.6;
     text-align: center; /* Centraliza o texto em todo o corpo */
+    font-size: 16px;}
     
-}
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
 
 /* Cabeçalho */
 .cabecalho {

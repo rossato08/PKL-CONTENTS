@@ -353,18 +353,16 @@ a:focus, a:active {
     color: #aaa;
 }
 
-/* não tem cadastro */
+/* se não tem cadastro */
 .naotemcad {
     font-size: 24px;
 
 }
-
 .naotemcad a {
     color: #333;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
-
 .naotemcad a:hover {
     color: #5a34a3;
     transition: 0.4s;

@@ -16,7 +16,14 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-color: #f0f0f0;/* Cor de fundo de reserva */
+        font-size: 16px;}
+    
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
     }
+  }
+  
     
     /* Cabeçalho */
     .cabecalho {
