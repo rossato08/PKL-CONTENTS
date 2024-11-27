@@ -10,3 +10,6 @@ Fernando|Henrique|547.867.478-82|viniciussantanapsn@gmail.com|123|2024-11-09|11-
 =======
 lorena|oshiro|1234567890|lorenaoshiro@gmail.com|1234|2007-10-12|99999-9999|123.456.456.78|mauá|scs|RJ
 >>>>>>> 45c46e065972f90bbd6c7a869aa301a5383b8127
+mariana|souza|428.100.378-91|mariana@gmail.com|123|2024-11-07|11 94877 1754|032-84292|rua maua|rio de janeiro |RJ
+cibele|rossato |365200282721|cibele@gmail.com|123|2024-11-22|11 94877 1754|032-84292|rua maua|rio de janeiro |SP
+gabriel |noia |345666754645|gabriell@gmail.com|123|2024-11-08|11 94877 1754|032-84292|rua maua|rio de janeiro |SP

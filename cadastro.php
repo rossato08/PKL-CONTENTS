@@ -1,48 +1,3 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Receber dados do formulário
-    $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
-    $cpf = $_POST['cpf'];
-    $data_nascimento = $_POST['data-nascimento'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha']; // Senha original
-    $senha_confirm = $_POST['confirmar-senha'];
-    $cep = $_POST['cep'];
-    $endereco = $_POST['endereco'];
-    $cidade = $_POST['cidade'];
-    $estado = $_POST['estado'];
-
-    // Verificar se as senhas coincidem
-    if ($senha !== $senha_confirm) {
-        echo "As senhas não coincidem!";
-        exit;
-    }
-    // Verificar se o CPF já está cadastrado
-    $usuarios = file('usuarios.txt', FILE_IGNORE_NEW_LINES); // Lê o arquivo de usuários
-    foreach ($usuarios as $usuario) {
-        list($nome_armazenado, $sobrenome_armazenado, $cpf_armazenado, $email_armazenado, $senha_armazenada) = explode('|', $usuario);
-        if ($cpf_armazenado == $cpf) {
-            echo "CPF já cadastrado!";
-            exit;
-        }
-        if ($email_armazenado == $email) {
-            echo "E-mail já cadastrado!";
-            exit;
-        }
-    }
-
-    // Criar dados de usuário no formato que será salvo no arquivo
-    $dados_usuario = $nome . "|" . $sobrenome . "|" . $cpf . "|" . $email . "|" . $senha . "|" . $data_nascimento . "|" . $telefone . "|" . $cep . "|" . $endereco . "|" . $cidade . "|" . $estado . "\n";
-
-    // Salvar no arquivo "usuarios.txt"
-    file_put_contents("usuarios.txt", $dados_usuario, FILE_APPEND);
-
-    echo "Cadastro realizado com sucesso!";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -50,47 +5,97 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
-    <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <!-- CSS -->
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="testes.css">
-    <script>
-        // Efeito de digitação nos campos de entrada
-        document.addEventListener("DOMContentLoaded", function() {
-            const inputs = document.querySelectorAll(".form-control");
+    <style>
+        .mensagem-sucesso {
+            color: green;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            text-align: center;
+            background-color: #e0ffe0;
+            border: 1px solid #00cc00;
+            border-radius: 5px;
+            padding: 10px;
+        }
 
-            inputs.forEach(input => {
-                input.addEventListener("focus", function() {
-                    this.style.borderColor = "#00bcd4"; // Destaca a borda ao focar
-                });
-                input.addEventListener("blur", function() {
-                    this.style.borderColor = "#333"; // Restaura a borda ao desfocar
-                });
-            });
-        });
-        // Efeito de carregamento no botão
-        const botao = document.querySelector(".botao");
-        botao.addEventListener("click", function(e) {
-            e.preventDefault(); // Previne o envio imediato do formulário
-            const loadingText = "Carregando...";
-            this.innerHTML = loadingText;
-            this.disabled = true; // Desabilita o botão
-
-            // Simula um delay de carregamento
-            setTimeout(() => {
-                this.innerHTML = "Concluído";
-                this.disabled = false;
-                setTimeout(() => {
-                    this.innerHTML = "Enviar"; // Restaura o texto
-                }, 1000);
-            }, 2000); // Delay de 2 segundos
-        });
-    </script>
+        .mensagem-erro {
+            color: red;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            text-align: center;
+            background-color: #ffe0e0;
+            border: 1px solid #cc0000;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <!--cabeçalho-->
+    <?php
+    // Ocultar erros e avisos
+    error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+
+    $mensagem = ""; // Variável para armazenar mensagem de sucesso ou erro
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Receber dados do formulário
+        $nome = $_POST['nome'];
+        $sobrenome = $_POST['sobrenome'];
+        $cpf = $_POST['cpf'];
+        $data_nascimento = $_POST['data-nascimento'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $senha_confirm = $_POST['confirmar-senha'];
+        $cep = $_POST['cep'];
+        $endereco = $_POST['endereco'];
+        $cidade = $_POST['cidade'];
+        $estado = $_POST['estado'];
+
+        // Verificar se as senhas coincidem
+        if ($senha !== $senha_confirm) {
+            $mensagem = "<p class='mensagem-erro'>As senhas não coincidem!</p>";
+        } else {
+            // Verificar se o CPF ou e-mail já estão cadastrados
+            $usuarios = file('usuarios.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            $cpf_ja_cadastrado = false;
+            $email_ja_cadastrado = false;
+
+            foreach ($usuarios as $usuario) {
+                $dados_usuario = explode('|', $usuario);
+                if (count($dados_usuario) >= 4) { // Verificar se há pelo menos 4 campos
+                    $cpf_armazenado = $dados_usuario[2];
+                    $email_armazenado = $dados_usuario[3];
+
+                    if ($cpf_armazenado == $cpf) {
+                        $cpf_ja_cadastrado = true;
+                    }
+                    if ($email_armazenado == $email) {
+                        $email_ja_cadastrado = true;
+                    }
+                }
+            }
+
+            if ($cpf_ja_cadastrado) {
+                $mensagem = "<p class='mensagem-erro'>CPF já cadastrado!</p>";
+            } elseif ($email_ja_cadastrado) {
+                $mensagem = "<p class='mensagem-erro'>E-mail já cadastrado!</p>";
+            } else {
+                // Criar e salvar dados do novo usuário
+                $dados_usuario = $nome . "|" . $sobrenome . "|" . $cpf . "|" . $email . "|" . $senha . "|" . $data_nascimento . "|" . $telefone . "|" . $cep . "|" . $endereco . "|" . $cidade . "|" . $estado . "\n";
+                file_put_contents("usuarios.txt", $dados_usuario, FILE_APPEND);
+
+                // Definir mensagem de sucesso
+                $mensagem = "<p class='mensagem-sucesso'>Conta criada com sucesso!</p>";
+            }
+        }
+    }
+    ?>
+
+    <!-- Cabeçalho -->
     <header class="cabecalho">
         <nav class="navegacao">
             <ul>
@@ -103,10 +108,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </nav>
     </header>
-    <!-- Formulario-->
+
+    <!-- Formulário -->
     <div class="form">
-        <h1>Cadastro de Usuário</h1><br><br>
-        <form method="POST" action="cadastro.php">
+        <h1>Cadastro de Usuário</h1>
+        <!-- Mensagem de feedback -->
+        <?php echo $mensagem; ?>
+        <form method="POST" action="">
             <div class="form-row">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -162,71 +170,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="estado">Estado:</label>
                     <select id="estado" name="estado">
                         <option value="">Selecione um estado</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
                         <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <!-- Adicione mais estados aqui -->
                     </select><br>
                 </div>
             </div>
             <button class="botao" type="submit">Cadastrar</button>
+        </form>
     </div>
-    </form>
-    <!-- Rodape -->
-    <footer class="rodape">
-        <div class="cards">
-            <div class="cardrodape">
-                <div class="contatos">
-                    <p class="card-titulo">Nos siga</p>
-                    <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#" class="link"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#" class="link"><i class="fab fa-linkedin"></i> Linkedin</a>
-                </div>
-            </div>
-            <div class="cardrodape">
-                <div class="contatos">
-                    <p class="card-titulo">Explorar</p>
-                    <a href="./index.html" class="explorar">Início</a><br>
-                    <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
-                    <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                    <a href="./cadastro.php" class="explorar">Cadastro</a><br>
-                    <a href="./login.php" class="explorar">Login</a><br>
-                    <a href="./ajuda.html" class="explorar">Ajuda</a>
-                </div>
-            </div>
-            <div class="cardrodape">
-                <div class="contatos">
-                    <p class="card-titulo">Fale conosco </p>
-                    <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
-                    <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                </div>
-            </div>
-        </div>
-        <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
-    </footer>
 </body>
 
 </html>

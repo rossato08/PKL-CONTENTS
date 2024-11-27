@@ -1,10 +1,17 @@
 <?php
 session_start();
 
+// Ocultar erros de aviso (warnings) e notificação
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $usuarios = file('usuarios.txt', FILE_IGNORE_NEW_LINES);
+    $erro = ""; // Variável para armazenar a mensagem de erro
+
+    $loginValido = false;
+
     foreach ($usuarios as $usuario) {
         list($nome, $sobrenome, $cpf, $email_armazenado, $senha_armazenada) = explode('|', $usuario);
         if ($email_armazenado === $email && $senha_armazenada === $senha) {
@@ -13,22 +20,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit;
         }
     }
-    $erro = "E-mail ou senha inválidos!";
+
+    // Caso o login falhe, atribui a mensagem de erro
+    $erro = "E-mail ou senha incorretos!";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - PKL Contacts</title>
-     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="testes.css">
-    <!--css-->
     <style>
-        /* Reset básico */
-* {
+        /* Estilos para a mensagem de erro dentro do formulário */
+        .mensagem-erro {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -449,6 +469,7 @@ botao.addEventListener("click", function(e) {
 });
 </script>
     </style>
+    </style>
 </head>
 <body>
    <!--cabeçalho-->
@@ -464,6 +485,7 @@ botao.addEventListener("click", function(e) {
             </ul>
         </nav>
     </header>
+
 <!--formulario-->
 <div class="formulario">
 <h1>Login</h1> <br>
@@ -476,18 +498,23 @@ botao.addEventListener("click", function(e) {
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required><br>
     </div>
+    
+    <!-- Exibindo a mensagem de erro dentro do formulário -->
+    <?php if (isset($erro) && !empty($erro)): ?>
+        <div class="mensagem-erro">
+            <?php echo $erro; ?>
+        </div>
+    <?php endif; ?>
+
     <div class="naotemcad">
         <p>Não tem cadastro? <a href="./cadastro.php">Cadastre-se</a></p>
     </div>
     <button class="botao" type="submit">Entrar</button>
 </form>
 </div>
-<?php if (isset($erro)): ?>
-    <p style="color: red;"><?php echo $erro; ?></p>
-<?php endif; ?>
 
- <!-- Rodape -->
- <footer class="rodape">
+<!-- Rodape -->
+<footer class="rodape">
         <div class="cards">
         <div class="cardrodape">
             <div class="contatos">
@@ -510,13 +537,13 @@ botao.addEventListener("click", function(e) {
         </div>
         <div class="cardrodape">
             <div class="contatos">
-                <p class="card-titulo">Fale conosco </p>
-                <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
-                <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                <p class="card-titulo">Contatos</p>
+                <p><i class="fas fa-map-marker-alt"></i> Endereço</p>
+                <p><i class="fas fa-phone-alt"></i> Telefone</p>
+                <p><i class="fas fa-envelope"></i> Email</p>
             </div>
         </div>
     </div>
-    <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
-    </footer>
+ </footer>
 </body>
 </html>

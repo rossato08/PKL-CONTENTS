@@ -321,3 +321,24 @@
         background: #ffcc00;/* Cor mais escura no hover, amarelo */
         transform: translateY(-3px);/* Efeito de elevação no hover */
     }
+    .mensagem-sucesso {
+        color: green;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        text-align: center;
+        background-color: #e0ffe0;
+        border: 1px solid #00cc00;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .mensagem-erro {
+        color: red;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        text-align: center;
+        background-color: #ffe0e0;
+        border: 1px solid #cc0000;
+        border-radius: 5px;
+        padding: 10px;
+    }
