@@ -537,10 +537,9 @@ botao.addEventListener("click", function(e) {
         </div>
         <div class="cardrodape">
             <div class="contatos">
-                <p class="card-titulo">Contatos</p>
-                <p><i class="fas fa-map-marker-alt"></i> Endereço</p>
-                <p><i class="fas fa-phone-alt"></i> Telefone</p>
-                <p><i class="fas fa-envelope"></i> Email</p>
+                <p class="card-titulo">Fale conosco </p>
+                <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
+                <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
             </div>
         </div>
     </div>
