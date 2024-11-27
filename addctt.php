@@ -11,7 +11,7 @@ if (!isset($_SESSION['usuario_email'])) {
 $email_usuario = $_SESSION['usuario_email'];
 $arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) . '_contatos.txt';
 
-// Criar o diretório de contatos, se não existir
+// Criar um diretório de contatos
 if (!is_dir('contatos')) {
     mkdir('contatos', 0777, true);
 }

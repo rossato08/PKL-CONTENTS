@@ -435,7 +435,7 @@ a:focus, a:active {
 }
     </style>
 <script>
-// Efeito de digitação nos campos de entrada (Simula um texto sendo digitado)
+// Efeito de digitação nos campos de entrada 
 document.addEventListener("DOMContentLoaded", function() {
     const inputs = document.querySelectorAll(".form-control");
  

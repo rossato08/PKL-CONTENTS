@@ -38,6 +38,7 @@ $contato = $_SESSION['contatos'][$index];
             </ul>
         </nav>
     </header>
+<!--informaçoes dos contatos-->
     <h1>Informações do Contato</h1>
     <p><strong>Nome:</strong> <?php echo $contato['nome']; ?></p>
     <p><strong>Email:</strong> <?php echo $contato['email']; ?></p>
