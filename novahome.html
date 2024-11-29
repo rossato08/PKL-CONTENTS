@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Contatos</title>
+    <!-- Link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!--cabeçalho-->
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <ul>
+                <li><a href="./index.html" class="link" aria-label="Início"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./addctt.php" class="link" aria-label="Adicionar Contato"><i
+                            class="fas fa-user-plus"></i>Adicionar Contato</a></li>
+                <li><a href="./listadecontatos.php" class="link" aria-label="Lista de Contatos"><i
+                            class="fas fa-list"></i> Lista de Contatos</a></li>
+                <li><a href="./cadastro.php" class="link" aria-label="Cadastro"><i class="fas fa-sign-in-alt"></i>
+                        Cadastro</a></li>
+                <li><a href="./logout.php" class="link" aria-label="Login"><i class="fas fa-user-slash"></i> Sair</a>
+                </li>
+                <li><a href="./ajuda.html" class="link" aria-label="Ajuda"><i class="fas fa-question-circle"></i>
+                        Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="secao_introducao">
+                <h2 class="subtitulo">Bem-vindo ao seu gerenciador de contatos!</h2>
+                <p class="descricao">Gerencie seus contatos de forma simples e rápida.</p>
+                <a href="./cadastro.php">
+                    <button class="botao"><a href="cadastro.php"
+                            style="text-decoration: none; color: white;">Começar</a></button>
+                </a>
+                <img class="print" src="./imgs/print coisas.png" alt="img">
+
+                <p> <i class="far fa-check-circle"></i> Rapido e Prático</p>
+                <p> <i class="far fa-check-circle"></i> Segurança</p>
+                <p> <i class="far fa-check-circle"></i> Facilidade</p>
+                <p> <i class="far fa-check-circle"></i> Organizado</p>
+                <p> <i class="far fa-check-circle"></i> Personalizado</p>
+                <p> <i class="far fa-check-circle"></i> Seguro</p>
+        </section>
+
+        <section class="secao recursos">
+            <h2 class="subtitulo">Recursos</h2>
+            <div class="grid-recursos">
+                <div class="recurso animar">
+                    <h3>Adicionar Contatos</h3>
+                    <p>✨ Adicione, edite e exclua contatos com facilidade.</p>
+                </div>
+                <div class="recurso animar">
+                    <h3>Boa Vizualização </h3>
+                    <p>🔍 Vizualize seus contatos de maneira facil e organizada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao testemunhos">
+            <h2 class="subtitulo">O que dizem nossos usuários</h2>
+            <div class="lista-testemunhos">
+                <blockquote class="testemunho">
+                    "Esse gerenciador de contatos facilitou minha vida! Agora posso encontrar qualquer pessoa em
+                    segundos." – Ana Silva
+                </blockquote>
+                <blockquote class="testemunho">
+                    "Simples e prático. Recomendo para todos!" – João Santos
+                </blockquote>
+            </div>
+        </section>
+    </main>
+    <!-- Rodape -->
+    <footer class="rodape">
+        <div class="cards">
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Nos siga</p>
+                    <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="link"><i class="fab fa-linkedin"></i> Linkedin</a>
+                </div>
+            </div>
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Explorar</p>
+                    <a href="./index.html" class="explorar">Início</a><br>
+                    <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
+                    <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
+                    <a href="#" class="explorar">Cadastro</a><br>
+                    <a href="" class="explorar">Login</a><br>
+                    <a href="./ajuda.html" class="explorar">Ajuda</a>
+                </div>
+            </div>
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Fale conosco </p>
+                    <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
+                    <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                </div>
+            </div>
+        </div>
+        <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
+    </footer>
+</body>
+
+<style>
+    /* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e9f5ff;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* Centraliza o texto em todo o corpo */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    color: white;
+    padding: 30px;
+    background-color: #6f42c1; /* Roxo */
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.cabecalho:hover {
+    background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
+}
+.titulo.logo {
+    font-size: 3rem; /* Tamanho maior */
+    font-weight: bold; /* Deixa a fonte mais forte */
+    background: linear-gradient(45deg, #ffffff, #ffffff); /* Gradiente de cor */
+    -webkit-background-clip: text; /* Faz o gradiente aplicar no texto */
+    color: transparent; /* Torna o fundo transparente para mostrar o gradiente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
+}
+/* Animação do nome */
+@keyframes animarLogo {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Efeito hover */
+.titulo.logo:hover {
+    transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+/* Navegação */
+.navegacao ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens na barra de navegação */
+    align-items: center;
+}
+.navegacao li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+    position: relative; /* Para criar um efeito de underline animado */
+}
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.link i {
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+.link:hover {
+    color: #ffffff; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
+}
+.link:hover i {
+    transform: translateX(5px); /* Animação suave para o ícone */
+}
+/* Underline animado */
+.link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.link:hover::before {
+    width: 100%;
+    left: 0;
+}
+/* Efeitos para links em foco ou clicados */
+.link:focus, .link:active {
+    color: #ffcc00;
+    outline: none; /* Remove o contorno padrão ao clicar */
+}
+
+.subtitulo {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6f42c1; /* Roxo */
+}
+.descricao {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+.botao {
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #6f42c1; /* Roxo */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.botao:hover {
+    background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
+    transform: scale(1.05);
+}
+/* Grid de recursos */
+.grid-recursos {
+    display: flex;
+    justify-content: center; /* Centraliza os itens na grid */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+}
+.recurso {
+    margin: 10px; /* Adiciona margem entre os recursos */
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Largura máxima para os recursos */
+}
+/* Testemunhos */
+.testemunho {
+    background-color: #f0f8ff;
+    border-left: 5px solid #6f42c1; /* Roxo */
+    padding: 15px;
+    margin: 10px 0;
+    font-style: italic;
+}
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    padding: 1px;
+    position: relative;
+    width: 100%;
+}
+.texto-rodape {
+    margin: 10px;
+    color: #f7f7f7;
+    text-align: center;
+}
+.cardrodape{
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+    width: 260px;
+    height: 250px;
+     border-color: #333;
+     font-size:larger;
+}
+.cardrodape img{
+    width: 50px;
+    height: 50px;
+}
+
+.card-titulo{
+   color: #ffffff;
+   text-decoration:underline;
+   text-decoration-color:#ffcc00 ;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.explorar{
+    font-size: large;
+    text-align: start;
+    text-decoration:none;
+    color: #f0f8ff;
+}
+a:hover {
+    transform: scale(2.0); 
+}
+a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+a:hover::before {
+    width: 100%;
+    left: 0;
+}
+a:focus, a:active {
+    outline: none; 
+}
+.secao_introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.918);
+    background-size: cover;
+    background-position: center;
+    opacity: 1.0;
+    height: 500px;
+
+} 
+
+.print{
+    width: 300px;
+    height: 200px;
+    padding-right: 200px;
+}
+
+</style>
+
+</html>

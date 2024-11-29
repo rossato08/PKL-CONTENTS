@@ -1,1 +1,4 @@
 richard|11 946551985|richard@gmail.com|rua maua
+vinicius|11-941573107|viniciussantanapsn@gmail.com|rua xavantes
+Felipe Henry|11964675224|felipesacchi@gmail.com|Rua Doutor Mario Freire
+Fernando|119528839344|fernandobertacco@gmail.com|Rua Silvia

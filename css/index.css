@@ -17,7 +17,7 @@ body {
     color: white;
     padding: 30px;
     background-color: #6f42c1; /* Roxo */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 .cabecalho:hover {
@@ -104,24 +104,7 @@ body {
     color: #ffcc00;
     outline: none; /* Remove o contorno padrão ao clicar */
 }
-/* Conteúdo */
-.conteudo {
-    padding: 40px;
-    text-align: center; /* Garante que o conteúdo seja centralizado */
-}
-.secao {
-    margin: 20px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.secao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
+
 .subtitulo {
     font-size: 1.8rem;
     margin-bottom: 10px;
@@ -228,4 +211,43 @@ a:hover::before {
 }
 a:focus, a:active {
     outline: none; 
+}
+.secao_introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.918);
+    background-size: cover;
+    background-position: center;
+    opacity: 1.0;
+    height: 500px;
+
+} 
+
+.container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 450px;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+.print{
+    float: left;
+    width: 50%;
+    object-fit: cover;
+    position: relative;
+    margin: -160px;
+    margin-left: 100px;
+    margin-top: -10px;
+}
+
+.ps{
+    float: left;
+    width: 50%;
+    clear: none;
 }
