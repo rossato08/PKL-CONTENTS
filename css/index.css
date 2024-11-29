@@ -237,3 +237,42 @@ a:hover::before {
 a:focus, a:active {
     outline: none; 
 }
+.secao_introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.89);
+    background-size: cover;
+    background-position: center;
+    opacity: 1.0;
+    height: 500px;
+
+} 
+
+.container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 450px;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+.print{
+    float: left;
+    object-fit: cover;
+    position: relative;
+    width: 50%;
+    margin: -160px;
+    margin-left: 100px;
+    margin-top: -10px;
+}
+
+.ps{
+    float: left;
+    width: 500px;
+    clear: none;
+}
