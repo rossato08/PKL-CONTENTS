@@ -15,3 +15,5 @@ cibele|rossato |365200282721|cibele@gmail.com|123|2024-11-22|11 94877 1754|032-8
 gabriel |noia |345666754645|gabriell@gmail.com|123|2024-11-08|11 94877 1754|032-84292|rua maua|rio de janeiro |SP
 matheus |mastroumano|45622218643|mateus@gmail.com|123|2024-11-08|11 859399373|032-84292|rua maua|rio de janeiro |SP
 Gustavo|Paiva|46857584879|gustavo.paiva@mail.com|1234|2004-05-31|11985768479|09290510|rua Boa vista|Piaiu|SP
+cleide|souza|13321346576876|rosisvalda@gmail.com|123|2024-11-08|11 96252677|09290510|rua muito top|Piaiu|
+GB|DFG|23545676869575|GB@gmail.com|123|2024-11-02|11 94877 1754|09290510|rua maua|Piaiu|RR
