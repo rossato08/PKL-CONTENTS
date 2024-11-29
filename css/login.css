@@ -246,7 +246,7 @@ a:focus, a:active {
     text-align: center;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 100px;
+    max-width: 500px;
     margin: 0 auto; /* Centraliza o formulário na tela */
     transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
@@ -263,7 +263,7 @@ a:focus, a:active {
  
 /* Botão futurista */
 .botao {
-    width: 180px;
+    width: 120px;
     padding: 12px;
     margin-top: 30px;
     background: #6f42c1 ; /* roxo */
@@ -284,7 +284,7 @@ a:focus, a:active {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 400%;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
@@ -312,7 +312,7 @@ a:focus, a:active {
     color: #333;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-left: 250px;
+    margin-left: 0px;
     display: block; /* Garante que o label fique em linha acima do input */
     transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
 }
@@ -343,7 +343,7 @@ a:focus, a:active {
 /* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
 .form-group input[type="email"]:before,
 .form-group input[type="password"]:before {
-    content: '\f0e0'; /* Ícone do email, por exemplo */
+    content: '\f0e0'; /* Ícone do email*/
     font-family: FontAwesome;
     position: absolute;
     left: 50px;
