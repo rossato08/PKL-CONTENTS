@@ -16,7 +16,14 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-color: #f0f0f0;/* Cor de fundo de reserva */
+        }
+    
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
     }
+  }
+  
     /* Cabeçalho */
     .cabecalho {
         color: white;
@@ -39,6 +46,7 @@
             opacity: 1;
         }
     }
+
     /* Navegação */
     .navegacao ul {
         list-style-type: none;
@@ -71,7 +79,6 @@
         color: #ffffff;/* Cor ao passar o mouse */
         transform: scale(1.05);/* Leve aumento no tamanho ao passar o mouse */
     }
-
     .link:hover i {
         transform: translateX(5px);/* Animação suave para o ícone */
     }
@@ -105,11 +112,11 @@
         background-color: #6f42c1;/* Roxo */
         transition: background-color 0.3s, transform 0.3s;
     }
-
     .botao:hover {
         background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
         transform: scale(1.05);
     }
+
     /* Rodapé */
     .rodape {
         background-color: #333;
@@ -165,11 +172,11 @@
         width: 100%;
         left: 0;
     }
-    a:focus,
-    a:active {
+    a:focus,a:active {
         color: #ffcc00;
         outline: none;
     }
+
     /*formulario*/
     .form {
         margin-top: 50px;
@@ -186,7 +193,6 @@
     .form:hover {
         transform: scale(1.05); /* Aumento suave do formulário ao passar o mouse */
     }
-     
     .form h1 {
         color: #6f42c1;
     }
@@ -214,16 +220,11 @@
     .form-group input[type="text"]:focus,
     .form-group input[type="tel"]:focus,
     .form-group input[type="date"]:focus {
-        border-color: #5a34a3;
-        /* Cor de foco */
-        background-color: #fff;
-        /* Cor de fundo ao focar */
-        outline: none;
-        /* Remove o contorno padrão do navegador */
-        box-shadow: 0 0 8px rgba(0, 188, 212, 0.7);
-        /* Efeito de sombra */
+        border-color: #5a34a3;/* Cor de foco */
+        background-color: #fff;/* Cor de fundo ao focar */
+        outline: none;/* Remove o contorno padrão do navegador */
+        box-shadow: 0 0 8px rgba(0, 188, 212, 0.7);/* Efeito de sombra */
     }
-
     /* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
     .form-group input[type="email"]:before {
         content: '\f0e0';/* Ícone do email */
@@ -235,7 +236,6 @@
         font-size: 18px;
         color: #aaa;
     }
-
     .form-group input[type="password"]:before {
         content: '\f023';/* Ícone de cadeado para senha */
         font-family: FontAwesome;
@@ -246,10 +246,8 @@
         font-size: 18px;
         color: #aaa;
     }
-
     .form-group input[type="text"]:before {
-        content: '\f007';
-        /* Ícone de pessoa para nome/sobrenome */
+        content: '\f007';/* Ícone de pessoa para nome/sobrenome */
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -258,10 +256,8 @@
         font-size: 18px;
         color: #aaa;
     }
-
     .form-group input[type="tel"]:before {
-        content: '\f095';
-        /* Ícone de telefone */
+        content: '\f095';/* Ícone de telefone */
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -270,10 +266,8 @@
         font-size: 18px;
         color: #aaa;
     }
-
     .form-group input[type="date"]:before {
-        content: '\f133';
-        /* Ícone de calendário */
+        content: '\f133';/* Ícone de calendário */
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -283,8 +277,7 @@
         color: #aaa;
     }
     .form-group input[type="cpf"]:before {
-        content: '\f0c0';
-        /* Ícone de identidade, você pode mudar para o ícone de CPF se disponível */
+        content: '\f0c0';/* Ícone de identidade, você pode mudar para o ícone de CPF se disponível */
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -293,11 +286,9 @@
         font-size: 18px;
         color: #aaa;
     }
-
-    /* Para o select (estado), você pode adicionar ícones também, caso deseje) */
+    /* Para o select (estado) */
     .form-group select:before {
-        content: '\f0c0';
-        /* Um ícone genérico, mas você pode alterar */
+        content: '\f0c0';/*ícone*/
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -306,7 +297,6 @@
         font-size: 18px;
         color: #aaa;
     }
-
     .form-group select {
         width: 225px;
         height: 52px;
@@ -334,8 +324,27 @@
         transform: translate(-50%, -50%) scale(1);
     }
     .botao:hover {
-        background: #ffcc00;
-        /* Cor mais escura no hover, amarelo */
-        transform: translateY(-3px);
-        /* Efeito de elevação no hover */
+        background: #ffcc00;/* Cor mais escura no hover, amarelo */
+        transform: translateY(-3px);/* Efeito de elevação no hover */
+    }
+    .mensagem-sucesso {
+        color: green;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        text-align: center;
+        background-color: #e0ffe0;
+        border: 1px solid #00cc00;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .mensagem-erro {
+        color: red;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        text-align: center;
+        background-color: #ffe0e0;
+        border: 1px solid #cc0000;
+        border-radius: 5px;
+        padding: 10px;
     }

@@ -64,8 +64,8 @@ if (isset($_GET['excluir'])) {
             </ul>
         </nav>
     </header>
-
 <?php if (!empty($contatos)): ?>
+<!--lista d contatos com informações -->
     <table>
         <thead>
             <tr>
@@ -83,6 +83,7 @@ if (isset($_GET['excluir'])) {
                     <td><?php echo htmlspecialchars($contato['telefone']); ?></td>
                     <td><?php echo htmlspecialchars($contato['email']); ?></td>
                     <td><?php echo htmlspecialchars($contato['endereco']); ?></td>
+            <!--Botões-->
                     <td>
                         <a class="btn btn-editar" href="editarcontato.php?indice=<?php echo $indice; ?>">Editar</a>
                         <a class="btn btn-excluir" href="listadecontatos.php?excluir=<?php echo $indice; ?>" onclick="return confirm('Tem certeza que deseja excluir este contato?');">Excluir</a>
@@ -91,6 +92,7 @@ if (isset($_GET['excluir'])) {
             <?php endforeach; ?>
         </tbody>
     </table>
+            <!--se não ouver contatos adicionados na conta-->
 <?php else: ?>
     <p>Nenhum contato encontrado. Adicione um novo contato!</p>
 <?php endif; ?>
@@ -112,8 +114,8 @@ if (isset($_GET['excluir'])) {
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>

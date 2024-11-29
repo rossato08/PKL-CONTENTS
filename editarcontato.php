@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Link para o Font Awesome -->
+     <!-- CSS do site -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
      <link rel="stylesheet" href="./css/editarcontato.css">
     <title>Editar Contato</title>
@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </nav>
     </header>
     <br> <br><br>
+<!--Informações de contato-->
 <form method="POST">
     <h2>Atualizar Informações</h2>
     <label for="nome">Nome</label>
@@ -91,8 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>

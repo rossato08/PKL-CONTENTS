@@ -38,6 +38,7 @@ $contato = $_SESSION['contatos'][$index];
             </ul>
         </nav>
     </header>
+<!--informaçoes dos contatos-->
     <h1>Informações do Contato</h1>
     <p><strong>Nome:</strong> <?php echo $contato['nome']; ?></p>
     <p><strong>Email:</strong> <?php echo $contato['email']; ?></p>
@@ -62,8 +63,8 @@ $contato = $_SESSION['contatos'][$index];
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>

@@ -11,7 +11,7 @@ if (!isset($_SESSION['usuario_email'])) {
 $email_usuario = $_SESSION['usuario_email'];
 $arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) . '_contatos.txt';
 
-// Criar o diretório de contatos, se não existir
+// Criar um diretório de contatos
 if (!is_dir('contatos')) {
     mkdir('contatos', 0777, true);
 }
@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Adicionar Contato - PKL Contacts</title>
      <!-- Link para o Font Awesome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!--CSS-->
      <link rel="stylesheet" href="./css/addctt.css">
 </head>
 <body>
@@ -61,8 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </nav>
     </header>
-
-
+    <!--formulario-->
 <div class="formulario">
     <h1>Adicionar Contato</h1>
     <form action="addctt.php" method="POST">
@@ -105,8 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="./index.html" class="explorar">Início</a><br>
                 <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
                 <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="#" class="explorar">Cadastro</a><br>
-                <a href="" class="explorar">Login</a><br>
+                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                <a href="./login.php" class="explorar">Login</a><br>
                 <a href="./ajuda.html" class="explorar">Ajuda</a>
             </div>
         </div>
