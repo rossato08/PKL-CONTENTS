@@ -246,9 +246,9 @@ a:focus, a:active {
 
 .print{
     float: left;
-    width: 50%;
     object-fit: cover;
     position: relative;
+    width: 50%;
     margin: -160px;
     margin-left: 100px;
     margin-top: -10px;
@@ -256,6 +256,6 @@ a:focus, a:active {
 
 .ps{
     float: left;
-    width: 50%;
+    width: 500px;
     clear: none;
 }
