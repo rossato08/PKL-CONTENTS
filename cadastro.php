@@ -8,29 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="testes.css">
-    <style>
-        .mensagem-sucesso {
-            color: green;
-            font-size: 1.2rem;
-            margin: 10px 0;
-            text-align: center;
-            background-color: #e0ffe0;
-            border: 1px solid #00cc00;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        .mensagem-erro {
-            color: red;
-            font-size: 1.2rem;
-            margin: 10px 0;
-            text-align: center;
-            background-color: #ffe0e0;
-            border: 1px solid #cc0000;
-            border-radius: 5px;
-            padding: 10px;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -84,7 +62,7 @@
             } elseif ($email_ja_cadastrado) {
                 $mensagem = "<p class='mensagem-erro'>E-mail já cadastrado!</p>";
             } else {
-                // Criar e salvar dados do novo usuário
+                // Criar e salvar dados do novo usuário dentro do arquivo usuarios.txt
                 $dados_usuario = $nome . "|" . $sobrenome . "|" . $cpf . "|" . $email . "|" . $senha . "|" . $data_nascimento . "|" . $telefone . "|" . $cep . "|" . $endereco . "|" . $cidade . "|" . $estado . "\n";
                 file_put_contents("usuarios.txt", $dados_usuario, FILE_APPEND);
 
@@ -170,9 +148,35 @@
                     <label for="estado">Estado:</label>
                     <select id="estado" name="estado">
                         <option value="">Selecione um estado</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <!-- Adicione mais estados aqui -->
+                        <option value="AC">Acre</option>
+<option value="AL">Alagoas</option>
+<option value="AP">Amapá</option>
+<option value="AM">Amazonas</option>
+<option value="BA">Bahia</option>
+<option value="CE">Ceará</option>
+<option value="DF">Distrito Federal</option>
+<option value="ES">Espírito Santo</option>
+<option value="GO">Goiás</option>
+<option value="MA">Maranhão</option>
+<option value="MT">Mato Grosso</option>
+<option value="MS">Mato Grosso do Sul</option>
+<option value="MG">Minas Gerais</option>
+<option value="PA">Pará</option>
+<option value="PB">Paraíba</option>
+<option value="PR">Paraná</option>
+<option value="PE">Pernambuco</option>
+<option value="PI">Piauí</option>
+<option value="RJ">Rio de Janeiro</option>
+<option value="RN">Rio Grande do Norte</option>
+<option value="RS">Rio Grande do Sul</option>
+<option value="RO">Rondônia</option>
+<option value="RR">Roraima</option>
+<option value="SC">Santa Catarina</option>
+<option value="SP">São Paulo</option>
+<option value="SE">Sergipe</option>
+<option value="TO">Tocantins</option>
+
+                   
                     </select><br>
                 </div>
             </div>
