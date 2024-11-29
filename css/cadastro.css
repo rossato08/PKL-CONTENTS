@@ -177,6 +177,10 @@
         outline: none;
     }
 
+    .form-row{
+        display: flex;
+    }
+
     /*formulario*/
     .form {
         margin-top: 50px;
@@ -184,10 +188,10 @@
         background-color: #ffff;
         border-radius: 5%;
         padding: 20px;
-        margin-left: 530px;
         font-style: italic;
-        width: 750px;
-        display: grid;
+        width: 100vh;
+        display: flex;    
+        flex-direction: column;
         transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     }
     .form:hover {
@@ -347,4 +351,7 @@
         border: 1px solid #cc0000;
         border-radius: 5px;
         padding: 10px;
+    }
+    .container{
+        padding: 0 20% 0 25%;
     }

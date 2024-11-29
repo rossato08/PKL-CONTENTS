@@ -23,12 +23,22 @@ body {
 /* Cabeçalho */
 .cabecalho {
     color: white;
-    padding: 30px;
-    background-color: #6f42c1;/* Roxo */
+    padding: 4vh; /* 30px → 4vh */
+    background-color: #6f42c1;
+    box-shadow: 0 0.3vh 1.5vh rgba(0, 0, 0, 0.1); /* 2px e 10px → vh */
     transition: background-color 0.3s ease;
+}.cabecalho:hover {
+    background-color: #5a34a3;
 }
-.cabecalho:hover {
-    background-color: #5a34a3;/* Roxo escuro ao passar o mouse */
+.titulo.logo {
+    font-size: 4.5vh; /* 3rem → vh */
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0.3vh 0.3vh 0.6vh rgba(0, 0, 0, 0.2); /* 2px e 4px → vh */
+    letter-spacing: 0.3vh; /* 2px → vh */
+    animation: animarLogo 1.5s ease-out forwards;
 }
 /* Animação do nome */
 @keyframes animarLogo {
@@ -41,48 +51,52 @@ body {
         opacity: 1;
     }
 }
-
+/* Efeito hover */
+.titulo.logo:hover {
+    transform: scale(1.1); /* Aumenta o tamanho quando o mouse passa */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
 /* Navegação */
 .navegacao ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;/* Centraliza os itens na barra de navegação */
+    justify-content: center; /* Centraliza os itens na barra de navegação */
     align-items: center;
 }
 .navegacao li {
-    margin: 0 20px;/* Espaçamento entre os itens */
-    position: relative;/* Para criar um efeito de underline animado */
+    margin: 0 3vh; /* 20px → vh */
+    position: relative; /* Para criar um efeito de underline animado */
 }
 .link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2.2vh; /* 1.2rem → vh */
     font-weight: 500;
     display: flex;
     align-items: center;
-    padding: 8px 10px;
+    padding: 1.2vh 1.5vh; /* 8px 10px → vh */
     transition: all 0.3s ease;
     position: relative;
 }
 .link i {
-    margin-right: 8px;/* Espaçamento entre ícone e texto */
-    font-size: 1.4rem;
+    margin-right: 1.2vh; /* 8px → vh */
+    font-size: 2.1vh; /* 1.4rem → vh */
     transition: transform 0.3s ease;
 }
 .link:hover {
-    color: #ffffff;/* Cor ao passar o mouse */
-    transform: scale(1.05);/* Leve aumento no tamanho ao passar o mouse */
+    color: #ffffff; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
 }
 .link:hover i {
-    transform: translateX(5px);/* Animação suave para o ícone */
+    transform: translateX(0.7vh); /* 5px → vh */
 }
 /* Underline animado */
 .link::before {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
+    height: 0.5vh; /* 3px → vh */
     background-color: #ffcc00;
     bottom: 0;
     left: 50%;
@@ -93,15 +107,15 @@ body {
     left: 0;
 }
 /* Efeitos para links em foco ou clicados */
-.link:focus,.link:active {
+.link:focus, .link:active {
     color: #ffcc00;
-    outline: none;/* Remove o contorno padrão ao clicar */
+    outline: none; /* Remove o contorno padrão ao clicar */
 }
 .botao {
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 1.11vh 2.22vh;
+    border-radius: 0.46vh;
     cursor: pointer;
     font-size: 1rem;
     background-color: #6f42c1;/* Roxo */
@@ -114,8 +128,8 @@ body {
 header {
     background-color: #6f42c1;
     color: white;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.85vh;
+    box-shadow: 0 0.19vh 0.93vh rgba(0, 0, 0, 0.1);
 }
 header h1 {
     margin: 0;
@@ -126,10 +140,10 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 10px 0;
+    margin: 0.93vh 0;
 }
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1.39vh;
 }
 nav ul li a {
     color: white;
@@ -143,30 +157,30 @@ nav ul li a:hover {
 
 /*Formulário*/
 .formulario {
-    margin: 20px auto;
-    padding: 20px;
+    margin: 1.85vh auto;
+    padding: 1.85vh;
     background: white;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*sombra*/
+    max-width: 46.3vh;
+    border-radius: 0.74vh;
+    box-shadow: 0 0.37vh 0.93vh rgba(0, 0, 0, 0.1);/*sombra*/
 }
 .formulario h1 {
     color: #6f42c1;/*roxo*/
 }
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.39vh;
     text-align: left;
 }
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.46vh;
     font-weight: bold;
 }
 .form-group input,.form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0.93vh;
+    border: 0.09vh solid #ccc;
+    border-radius: 0.46vh;
 }
 .form-group textarea {
     resize: vertical;
@@ -174,9 +188,9 @@ nav ul li a:hover {
 .botao {
     background-color: #6f42c1;
     color: white;
-    padding: 10px 20px;
+    padding: 0.93vh 1.85vh;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.46vh;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -186,63 +200,63 @@ nav ul li a:hover {
 }
 
 /* Rodapé */
-.rodape {
+.rodape{
     background-color: #333;
-    padding: 1px;
+    padding: 0.2vh; /* 1px → vh */
     position: relative;
     width: 100%;
-    top: 200px;
-}
-.texto-rodape {
-    margin: 10px;
-    color: #f7f7f7;
-    text-align: center;
-}
-.cardrodape {
-    display: flex;
-    background-color: #333;
-    padding: 15px;
-    width: 260px;
-    height: 250px;
-    border-color: #333;
-    font-size: larger;
-}
-.card-titulo {
-    color: #ffffff;
-    text-decoration: underline;
-    text-decoration-color: #ffcc00;
-}
-.cards {
-    display: flex;
-    justify-content: space-between;
-}
-.explorar {
-    font-size: large;
-    text-align: start;
-    text-decoration: none;
-    color: #f0f8ff;
-}
-a:hover {
-    transform: scale(2.0);
-}
-a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background-color: #ffcc00;
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-a:hover::before {
-    width: 100%;
-    left: 0;
-}
-a:focus,a:active {
-    color: #ffcc00;
-    outline: none;
-}
+    top: 22vh; /* 150px → vh */
+   }
+   .texto-rodape {
+       margin: 1.5vh; /* 10px → vh */
+       color: #f7f7f7;
+       text-align: center;
+   }
+   .cardrodape {
+       display: flex;
+       background-color: #333;
+       padding: 2.3vh; /* 15px → vh */
+       width: 38vh; /* 260px → vh */
+       height: 36vh; /* 250px → vh */
+       border-color: #333;
+       font-size: larger;
+   }
+   .card-titulo{
+      color: #ffffff;
+      text-decoration:underline;
+      text-decoration-color:#ffcc00 ;
+   }
+   .cards{
+       display: flex;
+       justify-content: space-between;
+   }
+   .explorar{
+       font-size: large;
+       text-align: start;
+       text-decoration:none;
+       color: #f0f8ff;
+   }
+   a:hover {
+       transform: scale(2.0); 
+   }
+   a::before {
+       content: '';
+       position: absolute;
+       width: 0;
+       height: 0.5vh; /* 3px → vh */
+       background-color: #ffcc00;
+       bottom: 0;
+       left: 50%;
+       transition: width 0.3s ease, left 0.3s ease;
+   }
+   a:hover::before {
+       width: 100%;
+       left: 0;
+   }
+   a:focus, a:active {
+       color: #ffcc00;
+       outline: none; 
+   }
  /* Efeito de onda no botão */
  .botao::before {
     content: '';
