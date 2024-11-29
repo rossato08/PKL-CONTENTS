@@ -1,5 +1,5 @@
-   /* Reset básico */
-   * {
+/* Reset básico */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,37 +9,35 @@ body {
     background-color: #e9f5ff;
     color: #333;
     line-height: 1.6;
-    text-align: center; /* Centraliza o texto em todo o corpo */
+    text-align: center;
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* sobreposição preta semitransparente */
-    url('../imgs/pl4.jpeg'); /* imagem de fundo */
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('../imgs/pl4.jpeg'); /* imagem de fundo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #f0f0f0; /* Cor de fundo de reserva */
-    
+    background-color: #f0f0f0;
 }
 /* Cabeçalho */
 .cabecalho {
     color: white;
-    padding: 30px;
-    background-color: #6f42c1; /* Roxo */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 4vh; /* 30px → 4vh */
+    background-color: #6f42c1;
+    box-shadow: 0 0.3vh 1.5vh rgba(0, 0, 0, 0.1); /* 2px e 10px → vh */
     transition: background-color 0.3s ease;
-}
-.cabecalho:hover {
-    background-color: #5a34a3; /* Roxo escuro ao passar o mouse */
+}.cabecalho:hover {
+    background-color: #5a34a3;
 }
 .titulo.logo {
-    font-size: 3rem; /* Tamanho maior */
-    font-weight: bold; /* Deixa a fonte mais forte */
-    background: linear-gradient(45deg, #ffffff, #ffffff); /* Gradiente de cor */
-    -webkit-background-clip: text; /* Faz o gradiente aplicar no texto */
-    color: transparent; /* Torna o fundo transparente para mostrar o gradiente */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave no texto */
-    letter-spacing: 2px; /* Espaçamento entre as letras */
-    animation: animarLogo 1.5s ease-out forwards; /* Animação do nome */
+    font-size: 4.5vh; /* 3rem → vh */
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0.3vh 0.3vh 0.6vh rgba(0, 0, 0, 0.2); /* 2px e 4px → vh */
+    letter-spacing: 0.3vh; /* 2px → vh */
+    animation: animarLogo 1.5s ease-out forwards;
 }
 /* Animação do nome */
 @keyframes animarLogo {
@@ -66,23 +64,23 @@ body {
     align-items: center;
 }
 .navegacao li {
-    margin: 0 20px; /* Espaçamento entre os itens */
+    margin: 0 3vh; /* 20px → vh */
     position: relative; /* Para criar um efeito de underline animado */
 }
 .link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.8vh; /* 1.2rem → vh */
     font-weight: 500;
     display: flex;
     align-items: center;
-    padding: 8px 10px;
+    padding: 1.2vh 1.5vh; /* 8px 10px → vh */
     transition: all 0.3s ease;
     position: relative;
 }
 .link i {
-    margin-right: 8px; /* Espaçamento entre ícone e texto */
-    font-size: 1.4rem;
+    margin-right: 1.2vh; /* 8px → vh */
+    font-size: 2.1vh; /* 1.4rem → vh */
     transition: transform 0.3s ease;
 }
 .link:hover {
@@ -90,14 +88,14 @@ body {
     transform: scale(1.05); /* Leve aumento no tamanho ao passar o mouse */
 }
 .link:hover i {
-    transform: translateX(5px); /* Animação suave para o ícone */
+    transform: translateX(0.7vh); /* 5px → vh */
 }
 /* Underline animado */
 .link::before {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
+    height: 0.5vh; /* 3px → vh */
     background-color: #ffcc00;
     bottom: 0;
     left: 50%;
@@ -114,39 +112,40 @@ body {
 }
 /* Conteúdo */
 .conteudo {
-    padding: 40px;
-    text-align: center; /* Garante que o conteúdo seja centralizado */
+    padding: 5vh; /* 40px → vh */
+    text-align: center;
 }
 .secao {
-    margin: 20px auto;
-    padding: 30px;
+    margin: 3vh auto; /* 20px → vh */
+    padding: 4vh; /* 30px → vh */
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1.2vh; /* 8px → vh */
+    box-shadow: 0 0.3vh 2.5vh rgba(0, 0, 0, 0.1); /* 2px e 15px → vh */
     max-width: 600px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .secao:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.8vh); /* 5px → vh */
+    box-shadow: 0 0.6vh 3vh rgba(0, 0, 0, 0.2); /* 4px e 20px → vh */
 }
 .subtitulo {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #6f42c1; /* Roxo */
+    font-size: 2.5vh; /* 1.8rem → vh */
+    margin-bottom: 1.5vh; /* 10px → vh */
+    color: #6f42c1;
 }
 .descricao {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.8vh; /* 1.2rem → vh */
+    margin-bottom: 3vh; /* 20px → vh */
     color: #555;
 }
 .botao {
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 1.6vh 3.5vh; /* 12px 24px → vh */
+    border-radius: 0.8vh; /* 5px → vh */
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5vh; /* 1rem → vh */
+    margin-top: 4vh; /* 30px → vh */
     background-color: #6f42c1; /* Roxo */
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -160,49 +159,28 @@ body {
     justify-content: center; /* Centraliza os itens na grid */
     flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
 }
-.recurso {
-    margin: 10px; /* Adiciona margem entre os recursos */
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Largura máxima para os recursos */
-}
-/* Testemunhos */
-.testemunho {
-    background-color: #f0f8ff;
-    border-left: 5px solid #6f42c1; /* Roxo */
-    padding: 15px;
-    margin: 10px 0;
-    font-style: italic;
-}
 /* Rodapé */
 .rodape{
  background-color: #333;
- padding: 1px;
+ padding: 0.2vh; /* 1px → vh */
  position: relative;
  width: 100%;
- top: 150px;
+ top: 22vh; /* 150px → vh */
 }
 .texto-rodape {
-    margin: 10px;
+    margin: 1.5vh; /* 10px → vh */
     color: #f7f7f7;
     text-align: center;
 }
-.cardrodape{
+.cardrodape {
     display: flex;
     background-color: #333;
-    padding: 15px;
-    width: 260px;
-    height: 250px;
-     border-color: #333;
-     font-size:larger;
+    padding: 2.3vh; /* 15px → vh */
+    width: 38vh; /* 260px → vh */
+    height: 36vh; /* 250px → vh */
+    border-color: #333;
+    font-size: larger;
 }
-.cardrodape img{
-    width: 50px;
-    height: 50px;
-}
-
 .card-titulo{
    color: #ffffff;
    text-decoration:underline;
@@ -225,7 +203,7 @@ a::before {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
+    height: 0.5vh; /* 3px → vh */
     background-color: #ffcc00;
     bottom: 0;
     left: 50%;
@@ -242,18 +220,17 @@ a:focus, a:active {
 /* Base do Formulário */
 .formulario {
     background-color: #ffffff; /* Cor off-white */
-    padding: 80px 20px 100px 20px;
+    padding: 10vh 3vh 13vh 3vh; /* 80px, 20px, 100px → vh */
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 500px;
-    margin: 0 auto; /* Centraliza o formulário na tela */
+    border-radius: 3vh; /* 20px → vh */
+    box-shadow: 0 3vh 5.5vh rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width:  31.20rem ;
+    margin: 5vh auto; /* 50px → vh */ /* Centraliza o formulário na tela */
     transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
 }
-
 .formulario h1{
-    font-size: 40px;
+    font-size: 3.7vh;
     color: #5a34a3;
 }
  /* Efeito ao passar o mouse sobre o formulário */
@@ -263,14 +240,14 @@ a:focus, a:active {
  
 /* Botão futurista */
 .botao {
-    width: 120px;
-    padding: 12px;
-    margin-top: 30px;
+    width: 15.1vh;
+    padding: 1.1vh;
+    margin-top: 2.8vh;
     background: #6f42c1 ; /* roxo */
     color: #fff;
-    font-size: 16px;
+    font-size: 2.0vh;
     border: none;
-    border-radius: 50px;
+    border-radius: 4.6vh;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
@@ -302,17 +279,17 @@ a:focus, a:active {
 }
 /* Estilo geral para o form-group */
 .form-group {
-    margin-bottom: 20px; /* Espaçamento entre os campos */
+    margin-bottom: 1.85vh; /* Espaçamento entre os campos */
     position: relative; /* Necessário para posicionamento do ícone no input */
 }
  
 /* Estilo do label */
 .form-group label {
-    font-size: 24px;
+    font-size: 2.22vh;
     color: #333;
     font-weight: bold;
-    margin-bottom: 5px;
-    margin-left: 0px;
+    margin-bottom: 0.46vh;
+    margin-left: 0;
     display: block; /* Garante que o label fique em linha acima do input */
     transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
 }
@@ -321,10 +298,10 @@ a:focus, a:active {
 .form-group input[type="email"],
 .form-group input[type="password"] {
     width : 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    padding: 1.39vh;
+    font-size: 1.48vh;
+    border: 0.19vh solid #ccc;
+    border-radius: 0.93vh;
     background-color: #f9f9f9;
     color: #333;
     box-sizing: border-box; /* Garante que o padding seja contabilizado dentro da largura */
@@ -337,7 +314,7 @@ a:focus, a:active {
     border-color: #5a34a3; /* Cor de foco */
     background-color: #fff; /* Cor de fundo ao focar */
     outline: none; /* Remove o contorno padrão do navegador */
-    box-shadow: 0 0 8px rgba(0, 188, 212, 0.7); /* Efeito de sombra */
+    box-shadow: 0 0 0.74vh rgba(0, 188, 212, 0.7); /* Efeito de sombra */
 }
  
 /* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
@@ -346,16 +323,16 @@ a:focus, a:active {
     content: '\f0e0'; /* Ícone do email*/
     font-family: FontAwesome;
     position: absolute;
-    left: 50px;
+    left: 4.63vh;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 1.67vh;
     color: #aaa;
 }
 
 /* se não tem cadastro */
 .naotemcad {
-    font-size: 24px;
+    font-size: 2.2vh;
 
 }
 .naotemcad a {
@@ -371,7 +348,7 @@ a:focus, a:active {
 /* Responsividade - ajustes em telas menores */
 @media (max-width: 768px) {
     .formulario {
-        padding: 60px 15px 80px 15px;
+        padding: 10vh 2vw 13vh 2vw;
     }
     .botao {
         width: 100%;
@@ -379,6 +356,6 @@ a:focus, a:active {
     }
     .form-control {
         width: 90%;
-        margin-bottom: 10px;
+        margin-bottom: 2vh;
     }
 }
