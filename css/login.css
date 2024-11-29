@@ -263,7 +263,7 @@ a:focus, a:active {
  
 /* Botão futurista */
 .botao {
-    width: 80px;
+    width: 120px;
     padding: 12px;
     margin-top: 30px;
     background: #6f42c1 ; /* roxo */
@@ -312,7 +312,7 @@ a:focus, a:active {
     color: #333;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-left: 20px;
+    margin-left: 0px;
     display: block; /* Garante que o label fique em linha acima do input */
     transition: color 0.3s ease; /* Efeito suave ao passar o mouse sobre o label */
 }
