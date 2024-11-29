@@ -10,8 +10,7 @@ body {
     background-color: #e9f5ff;
     color: #333;
     line-height: 1.6;
-    text-align: center; /* Centraliza o texto em todo o corpo */
-    font-size: 16px;}
+    text-align: center; /* Centraliza o texto em todo o corpo */}
     
   @media (max-width: 768px) {
     body {
