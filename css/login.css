@@ -246,7 +246,7 @@ a:focus, a:active {
     text-align: center;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    max-width: 600px;
+    max-width: 100px;
     margin: 0 auto; /* Centraliza o formulário na tela */
     transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
@@ -284,8 +284,8 @@ a:focus, a:active {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
+    width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
@@ -320,7 +320,7 @@ a:focus, a:active {
 /* Estilo dos inputs */
 .form-group input[type="email"],
 .form-group input[type="password"] {
-    width : 300%;
+    width : 100%;
     padding: 15px;
     font-size: 16px;
     border: 2px solid #ccc;
