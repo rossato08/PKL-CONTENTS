@@ -1,7 +1,11 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #e9f5ff;
     color: #333;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),/* sobreposição preta semitransparente */url('../imgs/pl7.jpeg'); /* imagem de fundo */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     margin: 0;
     padding: 0;
     line-height: 1.6;
