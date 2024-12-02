@@ -19,7 +19,6 @@ body {
     }
   }
   
-
 /* Cabeçalho */
 .cabecalho {
     color: white;
@@ -160,7 +159,8 @@ nav ul li a:hover {
     margin: 1.85vh auto;
     padding: 1.85vh;
     background: white;
-    max-width: 46.3vh;
+    max-width: 49.3vh;
+    max-height: 50vh;
     border-radius: 0.74vh;
     box-shadow: 0 0.37vh 0.93vh rgba(0, 0, 0, 0.1);/*sombra*/
 }
