@@ -160,40 +160,42 @@ body {
     flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
 }
 /* Rodapé */
-.rodape{
- background-color: #333;
- padding: 0.2vh; /* 1px → vh */
- position: relative;
- width: 100%;
- top: 22vh; /* 150px → vh */
+.rodape {
+    background-color: #333;
+    padding: 1px;
+    position: relative;
+    width: 100%;
+    top: 10vh;
+    
 }
 .texto-rodape {
-    margin: 1.5vh; /* 10px → vh */
+    margin: 10px;
     color: #f7f7f7;
     text-align: center;
 }
 .cardrodape {
     display: flex;
     background-color: #333;
-    padding: 2.3vh; /* 15px → vh */
-    width: 38vh; /* 260px → vh */
-    height: 36vh; /* 250px → vh */
+    padding: 15px;
+    width: 260px;
+    height: 250px;
     border-color: #333;
     font-size: larger;
+   margin-left: 8vh;
 }
-.card-titulo{
-   color: #ffffff;
-   text-decoration:underline;
-   text-decoration-color:#ffcc00 ;
+.card-titulo {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
 }
-.cards{
+.cards {
     display: flex;
     justify-content: space-between;
 }
-.explorar{
+.explorar {
     font-size: large;
     text-align: start;
-    text-decoration:none;
+    text-decoration: none;
     color: #f0f8ff;
 }
 a:hover {

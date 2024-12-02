@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </nav>
 </header>
-
+<br><br>
 <!-- Formulário para adicionar um contato -->
 <div class="formulario">
     <h1>Adicionar Contato</h1>

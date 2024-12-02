@@ -200,42 +200,44 @@ nav ul li a:hover {
 }
 
 /* Rodapé */
-.rodape{
+.rodape {
     background-color: #333;
-    padding: 0.2vh; /* 1px → vh */
+    padding: 1px;
     position: relative;
     width: 100%;
-    top: 22vh; /* 150px → vh */
-   }
-   .texto-rodape {
-       margin: 1.5vh; /* 10px → vh */
-       color: #f7f7f7;
-       text-align: center;
-   }
-   .cardrodape {
-       display: flex;
-       background-color: #333;
-       padding: 2.3vh; /* 15px → vh */
-       width: 38vh; /* 260px → vh */
-       height: 36vh; /* 250px → vh */
-       border-color: #333;
-       font-size: larger;
-   }
-   .card-titulo{
-      color: #ffffff;
-      text-decoration:underline;
-      text-decoration-color:#ffcc00 ;
-   }
-   .cards{
-       display: flex;
-       justify-content: space-between;
-   }
-   .explorar{
-       font-size: large;
-       text-align: start;
-       text-decoration:none;
-       color: #f0f8ff;
-   }
+    top: 10vh;
+    
+}
+.texto-rodape {
+    margin: 10px;
+    color: #f7f7f7;
+    text-align: center;
+}
+.cardrodape {
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+    width: 260px;
+    height: 250px;
+    border-color: #333;
+    font-size: larger;
+   margin-left: 8vh;
+}
+.card-titulo {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+.explorar {
+    font-size: large;
+    text-align: start;
+    text-decoration: none;
+    color: #f0f8ff;
+}
    a:hover {
        transform: scale(2.0); 
    }

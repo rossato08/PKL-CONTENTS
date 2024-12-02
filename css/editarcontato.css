@@ -194,38 +194,37 @@ input[type="text"] {
     padding: 1px;
     position: relative;
     width: 100%;
+    top: 10vh;
+    
 }
 .texto-rodape {
     margin: 10px;
     color: #f7f7f7;
     text-align: center;
 }
-.cardrodape{
+.cardrodape {
     display: flex;
     background-color: #333;
     padding: 15px;
     width: 260px;
     height: 250px;
-     border-color: #333;
-     font-size:larger;
+    border-color: #333;
+    font-size: larger;
+   margin-left: 8vh;
 }
-.cardrodape img{
-    width: 50px;
-    height: 50px;
+.card-titulo {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
 }
-.card-titulo{
-   color: #ffffff;
-   text-decoration:underline;
-   text-decoration-color:#ffcc00 ;
-}
-.cards{
+.cards {
     display: flex;
     justify-content: space-between;
 }
-.explorar{
+.explorar {
     font-size: large;
     text-align: start;
-    text-decoration:none;
+    text-decoration: none;
     color: #f0f8ff;
 }
 .contatos a:hover {
