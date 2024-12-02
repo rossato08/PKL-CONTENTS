@@ -7,8 +7,8 @@
     <title>Cadastro de Usuário</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="stylesheet" href="testes.css">
-    
+    <!-- <link rel="stylesheet" href="testes.css"> -->
+
 </head>
 
 <body>
@@ -72,7 +72,6 @@
         }
     }
     ?>
-
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <nav class="navegacao">
@@ -86,134 +85,148 @@
             </ul>
         </nav>
     </header>
+    <section class="container">
+        <!-- Formulário -->
+        <div class="form">
+            <h1>Cadastro de Usuário</h1>
+            <!-- Mensagem de feedback -->
+            <?php echo $mensagem; ?>
+            <form method="POST" action="">
+                <div class="form-row">
+                    <!--Nome-->
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required><br>
+                    </div>
+                    <!--sobrenome-->
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required><br>
+                    </div>
+                    <!--CPF-->
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required maxlength="14" placeholder="Ex: 123.456.789-00"><br>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <!--Data de nascimento-->
+                    <div class="form-group">
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required><br>
+                    </div>
+                    <!--Telefone-->
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 91234-5678"><br>
+                    </div>
+                    <!--E-mail-->
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <!--Senha-->
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required><br>
+                    </div>
+                    <!--confirmar-->
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar Senha:</label>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" required><br>
+                    </div>
+                    <!--CEP-->
+                    <div class="form-group">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep"><br>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <!--Endereço-->
+                    <div class="form-group">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco"><br>
+                    </div>
+                    <!--Cidade-->
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade"><br>
+                    </div>
+                    <!--Estado-->
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado">
+                            <option value="">Selecione um estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
 
-    <!-- Formulário -->
-    <div class="form">
-        <h1>Cadastro de Usuário</h1>
-        <!-- Mensagem de feedback -->
-        <?php echo $mensagem; ?>
-        <form method="POST" action="">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" required maxlength="14" placeholder="Ex: 123.456.789-00"><br>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="data-nascimento">Data de Nascimento:</label>
-                    <input type="date" id="data-nascimento" name="data-nascimento" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 91234-5678"><br>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required><br>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="confirmar-senha">Confirmar Senha:</label>
-                    <input type="password" id="confirmar-senha" name="confirmar-senha" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep"><br>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco"><br>
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade"><br>
-                </div>
-                <div class="form-group">
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado">
-                        <option value="">Selecione um estado</option>
-                        <option value="AC">Acre</option>
-<option value="AL">Alagoas</option>
-<option value="AP">Amapá</option>
-<option value="AM">Amazonas</option>
-<option value="BA">Bahia</option>
-<option value="CE">Ceará</option>
-<option value="DF">Distrito Federal</option>
-<option value="ES">Espírito Santo</option>
-<option value="GO">Goiás</option>
-<option value="MA">Maranhão</option>
-<option value="MT">Mato Grosso</option>
-<option value="MS">Mato Grosso do Sul</option>
-<option value="MG">Minas Gerais</option>
-<option value="PA">Pará</option>
-<option value="PB">Paraíba</option>
-<option value="PR">Paraná</option>
-<option value="PE">Pernambuco</option>
-<option value="PI">Piauí</option>
-<option value="RJ">Rio de Janeiro</option>
-<option value="RN">Rio Grande do Norte</option>
-<option value="RS">Rio Grande do Sul</option>
-<option value="RO">Rondônia</option>
-<option value="RR">Roraima</option>
-<option value="SC">Santa Catarina</option>
-<option value="SP">São Paulo</option>
-<option value="SE">Sergipe</option>
-<option value="TO">Tocantins</option>
 
-                   
-                    </select><br>
+                        </select><br>
+                    </div>
                 </div>
-            </div>
-            <button class="botao" type="submit">Cadastrar</button>
-        </form>
-    </div>
+                <button class="botao" type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+    </section>
     <!-- Rodape -->
-<footer class="rodape">
+    <footer class="rodape">
         <div class="cards">
-        <div class="cardrodape">
-            <div class="contatos">
-                <p class="card-titulo">Nos siga</p>
-                <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#" class="link"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="#" class="link"><i class="fab fa-linkedin"></i> Linkedin</a>
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Nos siga</p>
+                    <a href="#" class="link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="link"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="link"><i class="fab fa-linkedin"></i> Linkedin</a>
+                </div>
+            </div>
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Explorar</p>
+                    <a href="./index.html" class="explorar">Início</a><br>
+                    <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
+                    <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
+                    <a href="./cadastro.php" class="explorar">Cadastro</a><br>
+                    <a href="./login.php" class="explorar">Login</a><br>
+                    <a href="./ajuda.html" class="explorar">Ajuda</a>
+                </div>
+            </div>
+            <div class="cardrodape">
+                <div class="contatos">
+                    <p class="card-titulo">Fale conosco </p>
+                    <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
+                    <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                </div>
             </div>
         </div>
-        <div class="cardrodape">
-            <div class="contatos">
-                <p class="card-titulo">Explorar</p>
-                <a href="./index.html" class="explorar">Início</a><br>
-                <a href="./addctt.php" class="explorar">Adicionar contato</a><br>
-                <a href="./listadecontatos.php" class="explorar">Lista de Contatos</a><br>
-                <a href="./cadastro.php" class="explorar">Cadastro</a><br>
-                <a href="./login.php" class="explorar">Login</a><br>
-                <a href="./ajuda.html" class="explorar">Ajuda</a>
-            </div>
-        </div>
-        <div class="cardrodape">
-            <div class="contatos">
-                <p class="card-titulo">Fale conosco </p>
-                <a href="#" class="link"><i class="far fa-envelope"></i> E-mail</a>
-                <a href="#" class="link"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-            </div>
-        </div>
-    </div>
- </footer>
+    </footer>
 </body>
 
 </html>
