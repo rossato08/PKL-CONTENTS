@@ -72,7 +72,6 @@
         }
     }
     ?>
-
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <nav class="navegacao">
@@ -86,10 +85,7 @@
             </ul>
         </nav>
     </header>
-
     <section class="container">
-
-
         <!-- Formulário -->
         <div class="form">
             <h1>Cadastro de Usuário</h1>
@@ -97,56 +93,68 @@
             <?php echo $mensagem; ?>
             <form method="POST" action="">
                 <div class="form-row">
+                    <!--Nome-->
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required><br>
                     </div>
+                    <!--sobrenome-->
                     <div class="form-group">
                         <label for="sobrenome">Sobrenome:</label>
                         <input type="text" id="sobrenome" name="sobrenome" required><br>
                     </div>
+                    <!--CPF-->
                     <div class="form-group">
                         <label for="cpf">CPF:</label>
                         <input type="text" id="cpf" name="cpf" required maxlength="14" placeholder="Ex: 123.456.789-00"><br>
                     </div>
                 </div>
                 <div class="form-row">
+                    <!--Data de nascimento-->
                     <div class="form-group">
                         <label for="data-nascimento">Data de Nascimento:</label>
                         <input type="date" id="data-nascimento" name="data-nascimento" required><br>
                     </div>
+                    <!--Telefone-->
                     <div class="form-group">
                         <label for="telefone">Telefone:</label>
                         <input type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 91234-5678"><br>
                     </div>
+                    <!--E-mail-->
                     <div class="form-group">
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required><br>
                     </div>
                 </div>
                 <div class="form-row">
+                    <!--Senha-->
                     <div class="form-group">
                         <label for="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" required><br>
                     </div>
+                    <!--confirmar-->
                     <div class="form-group">
                         <label for="confirmar-senha">Confirmar Senha:</label>
                         <input type="password" id="confirmar-senha" name="confirmar-senha" required><br>
                     </div>
+                    <!--CEP-->
                     <div class="form-group">
                         <label for="cep">CEP:</label>
                         <input type="text" id="cep" name="cep"><br>
                     </div>
                 </div>
                 <div class="form-row">
+                    <!--Endereço-->
                     <div class="form-group">
                         <label for="endereco">Endereço:</label>
                         <input type="text" id="endereco" name="endereco"><br>
                     </div>
+                    <!--Cidade-->
                     <div class="form-group">
                         <label for="cidade">Cidade:</label>
                         <input type="text" id="cidade" name="cidade"><br>
                     </div>
+                    <!--Estado-->
                     <div class="form-group">
                         <label for="estado">Estado:</label>
                         <select id="estado" name="estado">
