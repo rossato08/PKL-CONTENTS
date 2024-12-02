@@ -191,7 +191,7 @@
         font-style: italic;
         width: 100vh;
         display: flex;    
-        flex-direction: column;
+        flex-direction: column;/*garante que os inputs estejam organizados da forma em que estão*/
         transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     }
     .form:hover {
@@ -206,9 +206,11 @@
     .form-group input[type="date"],
     .form-group input[type="email"],
     .form-group input[type="password"],
-    .form-group input[type="cpf"] {
+    .form-group input[type="cpf"],
+    .form-group input[type="endereco"]{
         width: 100%;
         padding: 15px;
+        margin-top: 5vh;
         font-size: 16px;
         border: 2px solid #ccc;
         border-radius: 10px;
@@ -229,7 +231,7 @@
         outline: none;/* Remove o contorno padrão do navegador */
         box-shadow: 0 0 8px rgba(0, 188, 212, 0.7);/* Efeito de sombra */
     }
-    /* Estilo dos ícones de "input" (opcional, se você quiser usar ícones dentro do input) */
+    /* Estilo dos ícones de "input" */
     .form-group input[type="email"]:before {
         content: '\f0e0';/* Ícone do email */
         font-family: FontAwesome;
@@ -250,6 +252,7 @@
         font-size: 18px;
         color: #aaa;
     }
+    
     .form-group input[type="text"]:before {
         content: '\f007';/* Ícone de pessoa para nome/sobrenome */
         font-family: FontAwesome;
@@ -281,7 +284,7 @@
         color: #aaa;
     }
     .form-group input[type="cpf"]:before {
-        content: '\f0c0';/* Ícone de identidade, você pode mudar para o ícone de CPF se disponível */
+        content: '\f0c0';/* Ícone de identidade*/
         font-family: FontAwesome;
         position: absolute;
         left: 15px;
@@ -294,17 +297,20 @@
     .form-group select:before {
         content: '\f0c0';/*ícone*/
         font-family: FontAwesome;
-        position: absolute;
         left: 15px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 18px;
         color: #aaa;
+        margin-top: 5vh;
     }
     .form-group select {
+        transform: translateY(-50%);
+        content: '\f0c0';/*ícone*/
         width: 225px;
         height: 52px;
         border-radius: 8px;
+        margin-top: 2.6vh;
     }
     .botao {
         width: 140px;
@@ -331,6 +337,7 @@
         background: #ffcc00;/* Cor mais escura no hover, amarelo */
         transform: translateY(-3px);/* Efeito de elevação no hover */
     }
+    /*Mensagens de cadastro concluido ou não*/
     .mensagem-sucesso {
         color: green;
         font-size: 1.2rem;
@@ -341,7 +348,6 @@
         border-radius: 5px;
         padding: 10px;
     }
-
     .mensagem-erro {
         color: red;
         font-size: 1.2rem;
