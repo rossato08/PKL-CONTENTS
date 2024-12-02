@@ -226,6 +226,7 @@
                 </div>
             </div>
         </div>
+        <p class="texto-rodape">© 2024 Gerenciamento de Contatos. Todos os direitos reservados para PKL contacts.</p>
     </footer>
 </body>
 
