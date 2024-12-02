@@ -157,7 +157,7 @@ body {
 .grid-recursos {
     display: flex;
     justify-content: center; /* Centraliza os itens na grid */
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    flex-wrap: wrap; /*os itens se movem para a próxima linha */
 }
 /* Rodapé */
 .rodape {
@@ -205,7 +205,7 @@ a::before {
     content: '';
     position: absolute;
     width: 0;
-    height: 0.5vh; /* 3px → vh */
+    height: 0.5vh; 
     background-color: #ffcc00;
     bottom: 0;
     left: 50%;
@@ -222,12 +222,12 @@ a:focus, a:active {
 /* Base do Formulário */
 .formulario {
     background-color: #ffffff; /* Cor off-white */
-    padding: 10vh 3vh 13vh 3vh; /* 80px, 20px, 100px → vh */
+    padding: 10vh 3vh 13vh 3vh;
     text-align: center;
-    border-radius: 3vh; /* 20px → vh */
+    border-radius: 3vh; 
     box-shadow: 0 3vh 5.5vh rgba(0, 0, 0, 0.1); /* Sombra suave */
     max-width:  31.20rem ;
-    margin: 5vh auto; /* 50px → vh */ /* Centraliza o formulário na tela */
+    margin: 5vh auto; /* Centraliza o formulário na tela */
     transition: transform 0.3s ease-in-out; /* Transição para efeito interativo */
     margin-top: 50px; /* Garante que o formulário não fique colado ao topo */
 }
