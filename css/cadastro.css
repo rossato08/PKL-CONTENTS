@@ -119,26 +119,24 @@
     border-radius: 15px; /* Bordas arredondadas */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 90vh;
-    margin: 10vh auto; /* Centraliza o formulário */
+    margin:9vh auto; /* Centraliza o formulário */
 }
-.form h1 {
+   .form h1 {
     color: #6f42c1;
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: center;
-}
-
-/* Espaçamento e alinhamento dos campos */
-.form-group {
+   }
+   /* Espaçamento e alinhamento dos campos */
+   .form-group {
     margin-left: 2vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px; /* Espaçamento interno dentro do grupo */
     margin-bottom: 15px; /* Espaçamento entre os grupos */
-}
-
-.form-group label {
+    }
+   .form-group label {
     font-weight: bold;
     font-size: 1rem;
     color: #333;

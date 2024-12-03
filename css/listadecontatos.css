@@ -261,7 +261,8 @@ a:focus, a:active {
 color: #ffcc00;
 outline: none; 
 }
-
-.p{
-    color: #ffffff ;
+.mensagemerro{
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 100px;
 }
