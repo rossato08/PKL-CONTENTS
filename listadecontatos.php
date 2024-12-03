@@ -14,7 +14,15 @@ $arquivo_contatos = 'contatos/' . str_replace(['@', '.'], '_', $email_usuario) .
 $contatos = [];
 if (file_exists($arquivo_contatos)) {
     $linhas = file($arquivo_contatos, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-   
+    foreach ($linhas as $linha) {
+        $dados = explode('|', $linha);
+        $contatos[] = [
+             'nome' => $dados[0] ?? '',
+             'telefone' => $dados[1] ?? '',
+             'email' => $dados[2] ?? '',
+            'endereco' => $dados[3] ?? ''
+         ];
+     }
 }
 // Excluir contato
 if (isset($_GET['excluir'])) {
@@ -86,7 +94,7 @@ if (isset($_GET['excluir'])) {
     </table>
             <!--se não ouver contatos adicionados na conta-->
 <?php else: ?>
-    <p class="mensagemerro">Você não tem contatos adicionados. Adicione um novo contato!</p>
+    <p>Nenhum contato encontrado. Adicione um novo contato!</p>
 <?php endif; ?>
 
 <!-- Rodape -->
