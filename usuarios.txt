@@ -1,21 +1,2 @@
  gabriel|rossato|12366676532|gabriel@gmail.com|050208|2024-11-12|11948771754|032693927|rua conde amadeu barbeline 227|sao paulo|SP
 maria|rey|541139859830|mebdelrey@gmail.com|120806|2006-08-12|11948771754|032693927|pan|puta que pariu|SP
-biel|herrera|543222098654|biel@gmail.com|123|2024-11-18|1182104836|032693927|pan|puta que pariu|SP
-Maria Eduarda|de Brito Del Rey|1234567892|mebdelrey@outlook.com|120806|2006-08-12|11912345678|123.456.456.78|tupi|scs|PE
-Luked|sim|6576576858|eu@eu.soufoda|sexo|1999-10-24|99999-9999|123.456.456.78|mauá|mauá|AM
-marina|generato|86522298763|marina@gmail.com|050208|2024-11-14|1182104836|0326939273|pan|puta que pariu|SP
-Richard |Sousa Garcia|43428574800|richardrrggts@gmail.com|senha123senai|1985-10-06|11999369110|032693927|rua egidio gazolla|Mauá|SP
-<<<<<<< HEAD
-Fernando|Henrique|547.867.478-82|viniciussantanapsn@gmail.com|123|2024-11-09|11-941573107|09080320|Rua Xavantes, 215|Santo André|
-=======
-lorena|oshiro|1234567890|lorenaoshiro@gmail.com|1234|2007-10-12|99999-9999|123.456.456.78|mauá|scs|RJ
->>>>>>> 45c46e065972f90bbd6c7a869aa301a5383b8127
-mariana|souza|428.100.378-91|mariana@gmail.com|123|2024-11-07|11 94877 1754|032-84292|rua maua|rio de janeiro |RJ
-cibele|rossato |365200282721|cibele@gmail.com|123|2024-11-22|11 94877 1754|032-84292|rua maua|rio de janeiro |SP
-gabriel |noia |345666754645|gabriell@gmail.com|123|2024-11-08|11 94877 1754|032-84292|rua maua|rio de janeiro |SP
-matheus |mastroumano|45622218643|mateus@gmail.com|123|2024-11-08|11 859399373|032-84292|rua maua|rio de janeiro |SP
-Gustavo|Paiva|46857584879|gustavo.paiva@mail.com|1234|2004-05-31|11985768479|09290510|rua Boa vista|Piaiu|SP
-cleide|souza|13321346576876|rosisvalda@gmail.com|123|2024-11-08|11 96252677|09290510|rua muito top|Piaiu|
-GB|DFG|23545676869575|GB@gmail.com|123|2024-11-02|11 94877 1754|09290510|rua maua|Piaiu|RR
-gabriel|rossato|42810037895|cleberiano@gmail.com|123|2024-12-04|11948771754|032693927|rua conde amadeu barbeline 227|sao paulo|SP
-Maria|del rey|1234567892324|cleber@gmail.com|123|2024-12-19|99999-9999|09572550|Rua Pan|SÃO CAETANO DO SUL|SP
