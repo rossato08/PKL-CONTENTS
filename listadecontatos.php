@@ -94,7 +94,7 @@ if (isset($_GET['excluir'])) {
     </table>
             <!--se não ouver contatos adicionados na conta-->
 <?php else: ?>
-    <p>Nenhum contato encontrado. Adicione um novo contato!</p>
+    <p class="mensagemerro">Você não tem contatos adicionados. Adicione um novo contato!</p>
 <?php endif; ?>
 
 <!-- Rodape -->

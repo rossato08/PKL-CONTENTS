@@ -18,3 +18,4 @@ Gustavo|Paiva|46857584879|gustavo.paiva@mail.com|1234|2004-05-31|11985768479|092
 cleide|souza|13321346576876|rosisvalda@gmail.com|123|2024-11-08|11 96252677|09290510|rua muito top|Piaiu|
 GB|DFG|23545676869575|GB@gmail.com|123|2024-11-02|11 94877 1754|09290510|rua maua|Piaiu|RR
 gabriel|rossato|42810037895|cleberiano@gmail.com|123|2024-12-04|11948771754|032693927|rua conde amadeu barbeline 227|sao paulo|SP
+Maria|del rey|1234567892324|cleber@gmail.com|123|2024-12-19|99999-9999|09572550|Rua Pan|SÃO CAETANO DO SUL|SP
